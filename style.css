@@ -111,9 +111,11 @@ header ul {
 }
 
 .menuGauche li, .menuDroit li {
-   padding: 5px;
+   padding: 7px;
    margin: 10px;
    border: solid 3px rgb(13, 22, 55);
+   border-radius: 7px;
+
 }
 
 /*NAVIGATION*/
@@ -183,6 +185,7 @@ header ul {
    height: 480px;
    padding: 10px;
    border: solid 2px rgb(246, 239, 221);
+   border-radius: 7px;
    margin-right: 30px;
 }
 
@@ -192,6 +195,7 @@ header ul {
    padding: 10px;
    margin-top: 30px;
    border: solid 2px rgb(246, 239, 221);
+   border-radius: 7px;
 }
 
 /*PARTIE AGENCEMENT*/
@@ -213,6 +217,7 @@ header ul {
    width: 400px;
    height: 400px;
    border: solid 2px rgb(13, 22, 55);
+   border-radius: 7px;
    padding: 10px;
    margin: 10px;
 }
@@ -224,6 +229,7 @@ header ul {
    text-align: left;
    margin-bottom: 10px;
    border: solid 2px rgb(13, 22, 55);
+   border-radius: 7px;
 }
 
 /*PARTIE EQUIPEMENT*/
@@ -261,6 +267,7 @@ header ul {
    padding: 10px;
    margin: 10px;
    border: solid 2px rgb(13, 22, 55);
+   border-radius: 7px;
 }
 
 #photos #imageVueCambreRouge {

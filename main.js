@@ -6,12 +6,12 @@ const photos= document.querySelector('.photos');
 const carte= document.querySelector('.carte');
 const tarif= document.querySelector('.tarif');
 
-let heightDescription = description.offsetTop-0;
-let heightAgencement = agencement.offsetTop-0;
-let heightEquipements = equipements.offsetTop-0;
-let heightPhotos = photos.offsetTop-0;
-let heightCarte = carte.offsetTop-0;
-let heightTarif = tarif.offsetTop-0;
+let heightDescription = description.offsetTop-70;
+let heightAgencement = agencement.offsetTop-70;
+let heightEquipements = equipements.offsetTop-70;
+let heightPhotos = photos.offsetTop-70;
+let heightCarte = carte.offsetTop-70;
+let heightTarif = tarif.offsetTop-70;
 
 window.addEventListener('scroll', () =>{
    if(window.scrollY > 420){
