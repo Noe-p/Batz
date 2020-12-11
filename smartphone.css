@@ -1,0 +1,308 @@
+@font-face {
+   font-family: 'GreatVibes-Regular';
+   src: url("polices/great-vibes/GreatVibes-Regular.otf");
+}
+
+@font-face {
+   font-family: 'OpenSans-Regular';
+   src: url("polices/open-sans/OpenSans-Regular.ttf");
+}
+
+@font-face {
+   font-family: 'Lobster';
+   src: url("polices/Lobster/Lobster.otf");
+}
+
+body {
+   font-family: "OpenSans-Regular";
+   background-color: rgb(246, 239, 221);
+   color: rgb(13, 22, 55);
+}
+
+h2 {
+   font-size: 3em;
+   text-align: center;
+}
+
+h3{
+   font-size:1.9em;
+}
+
+p {
+   font-size: 2em;
+}
+
+ul {
+   font-size: 1.8em;
+   list-style-type: none;
+   margin-left: 0;
+   padding-left: 0;
+}
+
+li {
+   margin-bottom: 20px;
+}
+
+a {
+   text-decoration: none;
+   color: rgb(13, 22, 55);
+}
+
+.textAgencement span, .textTarifs span, .textInformations span, .textContact span {
+   font-weight: bold;
+}
+
+aside:hover {
+   border: solid 2px rgb(235, 165, 0);
+}
+
+a:visited {
+   color: rgb(13, 22, 55);
+}
+
+.lienMail:hover, p .lienLeboncoin:hover, .menu a:hover, footer a:hover, aside a:hover {
+   color: rgb(235, 165, 0);
+}
+
+/*EN-TETE*/
+header {
+   margin-bottom: 35px;
+   display: flex;
+   flex-direction:column;
+   align-items: center;
+}
+
+#enTete {
+   display: flex;
+   flex-wrap: wrap;
+
+}
+
+.imageHeader {
+   margin-left: 35px;
+   width:935px;
+   height: 565.4px;
+}
+
+#etoile {
+   margin-left: 30px;
+   width: 140px;
+   height: 100px;
+}
+
+h1 {
+   width: 700px;
+   font-size: 9em;
+   font-family: 'GreatVibes-Regular';
+   order: 1;
+}
+
+#enTete ul {
+   font-family: 'Lobster';
+   height: min-content;
+   font-size: 3.5em;
+   order: 2;
+}
+
+.menuGauche li, .menuDroit li {
+   padding:35px;
+   margin:10px;
+   border: solid 3px rgb(13, 22, 55);
+}
+.menuGauche{
+   margin-left:30px;
+}
+/*NAVIGATION*/
+aside {
+   background-color: rgb(13, 22, 55);
+   font-size: 0.5em;
+   text-align: center;
+   position: fixed;
+   padding: 5px;
+   color: rgb(246, 239, 221);
+   border: solid 1px rgb(246, 239, 221);
+   border-radius: 10px;
+   bottom: 35px;
+}
+
+#bouton {
+   left: 35px;
+}
+
+#bouton img {
+   width: 155px;
+   height: 155px;
+}
+
+#contactRapide {
+   right: 35px;
+   font-size:1em;
+}
+
+/*PARTIE DESCRIPTION*/
+#descriptionID {
+   background-color: rgb(13, 22, 55);
+   color: rgb(246, 239, 221);
+   padding: 30px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-wrap: wrap;
+   margin-left: 30px;
+}
+
+#descriptionID img {
+   margin-left: 30px;
+   width:783.36px;
+   height: 587.52px;
+   padding: 10px;
+   border: solid 2px rgb(246, 239, 221);
+}
+
+#descriptionID article {
+   text-align: center;
+   width: 900px;
+   padding: 10px;
+   margin-top: 30px;
+   border: solid 2px rgb(246, 239, 221);
+}
+
+/*PARTIE AGENCEMENT*/
+#agencementID {
+   padding: 30px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   margin-left: 30px;
+}
+
+#imageAgencement {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-wrap: wrap;
+}
+
+#imageAgencement img {
+   width: 900px;
+   height: 900px;
+   border: solid 2px rgb(13, 22, 55);
+   padding: 10px;
+   margin: 10px;
+}
+
+#articleAgencement {
+   width: 900px;
+   padding-left: 5px;
+   padding-right: 5px;
+   text-align: left;
+   margin: 10px;
+   border: solid 2px rgb(13, 22, 55);
+}
+
+/*PARTIE EQUIPEMENT*/
+#equipementsID {
+   background-color: rgb(13, 22, 55);
+   color: rgb(246, 239, 221);
+   align-items: center;
+   text-align: center;
+   padding:10px;
+   margin-left: 30px;
+}
+
+#listeEquipementsGauche, #listeEquipementsDroite {
+   display: inline-block;
+   vertical-align: middle;
+   text-align: center;
+   margin-right: 50px;
+   margin-left: 50px;
+   padding: 10px;
+}
+
+#listeEquipementsDroite li, #listeEquipementsGauche li {
+   list-style-image: url('photos/checkV2.png');
+}
+
+/*PHOTOS*/
+#photos {
+   margin-top: 20px;
+   padding: 5px;
+   text-align: center;
+}
+
+#photos img {
+   width: 900px;
+   height: 674.35px;
+   padding: 10px;
+   margin: 5px;
+   border: solid 2px rgb(13, 22, 55);
+   margin-left: 30px;
+}
+
+#photos #imageVueCambreRouge {
+   width: 900px;
+   height: 1600px;
+   margin-left: 30px;
+}
+
+#photos #ChambreMilieu {
+   width: 900px;
+   height: 1200px;
+   margin-left: 30px;
+}
+
+/*CARTE*/
+#carte {
+   background-color: rgb(13, 22, 55);
+   color: rgb(246, 239, 221);
+   text-align: center;
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+   margin-bottom: 30px;
+   font-family: 'Lobster';
+   font-size: 1.2em;
+   margin-left: 30px;
+}
+
+#carte h2 {
+   font-family: 'GreatVibes-Regular';
+   font-size: 3em;
+}
+
+#carte img {
+   width: 1000px;
+   height: 571px;
+}
+
+/*PARTIE TARIF INFORMATION*/
+.tarifs, .informations {
+   width: 900px;
+   height: 400px;
+   margin: 10px;
+   border-bottom: solid 3px rgb(13, 22, 55);
+}
+
+
+/*FOOTER*/
+footer {
+   color: rgb(246, 239, 221);
+   background-color: rgb(13, 22, 55);
+   text-align: center;
+   padding: 20px;
+   margin-left: 30px;
+}
+
+.leboncoin, .lienMail {
+   color: rgb(246, 239, 221);
+   text-decoration: underline;
+}
+
+.lienLeboncoin:visited, .lienMail:visited, footer a:visited {
+   color: rgb(246, 239, 221);
+   text-decoration: underline;
+}
+
+footer a, aside a {
+   color: rgb(246, 239, 221);
+}
