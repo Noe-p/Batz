@@ -13,6 +13,7 @@ let heightPhotos = photos.offsetTop-70;
 let heightCarte = carte.offsetTop-70;
 let heightTarif = tarif.offsetTop-70;
 
+
 window.addEventListener('scroll', () =>{
    if(window.scrollY > 420){
       nav.classList.add('position')
