@@ -16,6 +16,10 @@
    src: url("polices/lobster/Lobster.otf");
 }
 
+html {
+  scroll-behavior:smooth;
+}
+
 body {
    font-family: "Raleway-Regular";
    background-color: rgb(246, 239, 221);
@@ -117,7 +121,7 @@ h1 {
    position:relative;
    overflow:hidden;
    transition-property:background-color;
-   transition-duration: 0.3s;
+   transition-duration: 0.5s;
 }
 .menuGauche a::before, .menuDroit a::before{
    content:'';
@@ -129,14 +133,14 @@ h1 {
    width:100%;
    z-index:-1;
    opacity:0;
-   transition: all 0.3s;
+   transition: all 0.5s;
    transform: translate(-50%, -50%) rotate(45deg);
 }
 .menuGauche a:hover, .menuDroit a:hover{
    color:rgb(246, 239, 221);
 }
 .menuGauche a:hover::before, .menuDroit a:hover::before{
-   opacity:1;
+   opacity: 1;
    height: 260%;
 }
 .menuGauche a:active::before, .menuDroit a:active::before{
@@ -176,7 +180,7 @@ h1 {
 
 .navigation.position.positionFin {
    position: absolute;
-   top: 4755px;
+   top: 4720px;
    left: 30px;
 }
 
@@ -375,8 +379,8 @@ footer {
    height: 300px;
 }
 
-#piedPage {
-   position: absolute;
+#piedPage{
+   position:absolute;
 }
 
 .bouton {
@@ -386,7 +390,7 @@ footer {
    padding: 5px;
    width: 50px;
    height: 50px;
-   margin-left: 300px;
+   margin-left: 50%;
 }
 
 .leboncoin, .lienMail {
@@ -539,6 +543,10 @@ footer a, aside a {
       margin-left: 30px;
       width: 480px;
       height: 360px;
+   }
+
+   .bouton {
+      margin-left: 65%;
    }
 }
 

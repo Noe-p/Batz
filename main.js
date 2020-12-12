@@ -55,7 +55,7 @@ window.addEventListener('scroll', () =>{
    || (window.scrollY > heightTarif)){
       nav.classList.remove('couleur');
    }
-   if(window.scrollY > 4725){
+   if(window.scrollY > 4700){
       nav.classList.add('positionFin');
    }
    else{
