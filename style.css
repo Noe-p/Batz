@@ -4,17 +4,20 @@
 }
 
 @font-face {
-   font-family: 'OpenSans-Regular';
-   src: url("polices/open-sans/OpenSans-Regular.ttf");
+   font-family: 'Raleway-Medium';
+   src: url("polices/raleway/Raleway-Medium.ttf");
 }
-
+@font-face {
+   font-family: 'Raleway-Regular';
+   src: url("polices/raleway/Raleway-Regular.ttf");
+}
 @font-face {
    font-family: 'Lobster';
-   src: url("polices/Lobster/Lobster.otf");
+   src: url("polices/lobster/Lobster.otf");
 }
 
 body {
-   font-family: "OpenSans-Regular";
+   font-family: "Raleway-Regular";
    background-color: rgb(246, 239, 221);
    color: rgb(13, 22, 55);
 }
@@ -22,6 +25,7 @@ body {
 h2 {
    font-size: 2em;
    text-align: center;
+   font-family: "Raleway-Medium";
 }
 
 h3 {
@@ -87,7 +91,6 @@ header {
 }
 
 h1 {
-   width: auto;
    font-size: 6vw;
    font-family: 'GreatVibes-Regular';
    order: 2;
