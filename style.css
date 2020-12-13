@@ -306,14 +306,25 @@ h1 {
 
 /*PHOTOS*/
 #photos {
-   margin-top: 20px;
-   padding: 10px;
-   text-align: center;
+   margin-top:30px;
+   margin-bottom:30px;
+   position: relative;
+   display: flex;
+   justify-content: space-around;
+   align-items:center;
 }
-
-#photos img {
-   width: 564.48px;
-   height: 423.36px;
+.prev{
+   order:1;
+}
+.carrousel{
+   order:2;
+}
+.next{
+   order:3;
+}
+.carrousel img {
+   width: 800px;
+   height: 605px;
    padding: 10px;
    margin: 10px;
    border: solid 2px rgb(13, 22, 55);
@@ -321,14 +332,25 @@ h1 {
 }
 
 #photos #imageVueCambreRouge {
-   width: 270px;
-   height: 480px;
+   width: 340px;
+   height: 605px;
+   margin-left:240px;
+   margin-right:240px;
 }
 
 #photos #ChambreMilieu {
-   width: 270px;
-   height: 360px;
+   width: 453.6px;
+   height: 605px;
+   margin-left:183.2px;
+   margin-right:183.2px;
 }
+
+.prev, .next{
+   left:3px;
+   width:70px;
+   height: 70px;
+}
+
 
 /*CARTE*/
 #carte {
@@ -440,20 +462,6 @@ footer a, aside a {
       padding: 10px;
    }
 
-   #photos img {
-      width: 394.8px;
-      height: 296.1px;
-   }
-
-   #photos #imageVueCambreRouge {
-      width: 189.7px;
-      height: 336px;
-   }
-
-   #photos #ChambreMilieu {
-      width: 189px;
-      height: 252px;
-   }
 }
 
 @media screen and (max-width:1140px) {
@@ -461,6 +469,31 @@ footer a, aside a {
       padding-left: 50px;
       padding-right: 50px;
    }
+   .carrousel img {
+      width: 500px;
+      height: 378px;
+   }
+
+   #photos #imageVueCambreRouge {
+      width: 212.5px;
+      height: 378px;
+      margin-left:155px;
+      margin-right:155px;
+   }
+
+   #photos #ChambreMilieu {
+      width: 283.5px;
+      height: 378px;
+      margin-left:117px;
+      margin-right:117px;
+   }
+
+   .prev, .prev{
+      width:50px;
+      height: 50px;
+
+   }
+
 }
 
 @media screen and (max-width:1010px) {
@@ -469,20 +502,6 @@ footer a, aside a {
       height: 294.49px;
    }
 
-   #photos img {
-      width: 276.5px;
-      height: 207.2px;
-   }
-
-   #photos #imageVueCambreRouge {
-      width: 133px;
-      height: 235.2px;
-   }
-
-   #photos #ChambreMilieu {
-      width: 132.3px;
-      height: 176.4px;
-   }
 
    #imageAgencement img {
       width: 250px;
@@ -510,20 +529,6 @@ footer a, aside a {
       height: 205.8px;
    }
 
-   #photos img {
-      width: 276.36px;
-      height: 207.27px;
-   }
-
-   #photos #imageVueCambreRouge {
-      width: 132.3px;
-      height: 235.2px;
-   }
-
-   #photos #ChambreMilieu {
-      width: 132.3px;
-      height: 176.4px;
-   }
 
    .imagesAgencement img {
       width: 175px;
@@ -553,19 +558,28 @@ footer a, aside a {
 @media screen and (max-width:685px) {
 
 
-   #photos img {
-      width: 165.8px;
-      height: 132.3px;
+   .carrousel img {
+      width: 400px;
+      height: 302.5px;
    }
 
    #photos #imageVueCambreRouge {
-      width: 79.38px;
-      height: 141.12px;
+      width: 170px;
+      height: 302.2px;
+      margin-left:120px;
+      margin-right:120px;
    }
 
    #photos #ChambreMilieu {
-      width: 79.38px;
-      height: 105.84px;
+      width: 226.8px;
+      height: 302.5px;
+      margin-left:91.6px;
+      margin-right:91.6px;
+   }
+
+   .next, .prev{
+      width:40px;
+      height: 40px;
    }
 }
 
@@ -589,4 +603,5 @@ footer a, aside a {
       height: 250px;
       margin: 20px;
    }
+
 }
