@@ -60,10 +60,6 @@ a {
    font-weight: bold;
 }
 
-.bouton:hover {
-   border: solid 2px rgb(235, 165, 0);
-}
-
 a:visited {
    color: rgb(13, 22, 55);
 }
@@ -235,13 +231,23 @@ h1 {
    align-items: center;
 }
 
+.imagesAgencement img:hover{
+   margin-bottom: 30px;
+   border: solid 2px rgb(235, 165, 0);
+}
 .imagesAgencement {
+   height:500px;
    display: flex;
    justify-content: center;
    align-items: center;
    flex-wrap: wrap;
 }
+.imagesAgencement img{
+   transition-property: margin, border;
+   transition-duration: 0.2s;
+   transition-timing-function: ease-in-out;
 
+}
 .imageAgencement{
    width: 400px;
    height: 400px;
@@ -252,6 +258,9 @@ h1 {
    transition: none;
 }
 
+.ouvertureImage img:hover{
+   border:none;
+}
 .ouvertureImage{
    position: fixed;
    top:0;
@@ -312,6 +321,9 @@ h1 {
    display: flex;
    justify-content: space-around;
    align-items:center;
+   transition-property:all;
+   transition-duration: 0.4s;
+   transition-timing-function: ease-in-out;
 }
 .prev{
    order:1;
@@ -345,10 +357,17 @@ h1 {
    margin-right:183.2px;
 }
 
+.prev:hover, .next:hover{
+   width:75px;
+   height:75px;
+   padding:7.5px;
+}
 .prev, .next{
-   left:3px;
+   padding: 10px;
    width:70px;
    height: 70px;
+   transition:all 0.1s ease-in-out;
+
 }
 
 
@@ -404,7 +423,11 @@ footer {
 #piedPage{
    position:absolute;
 }
-
+.bouton:hover {
+   border: solid 2px rgb(235, 165, 0);
+   width:55px;
+   height:55px;
+}
 .bouton {
    background-color: rgb(13, 22, 55);
    border: solid 1px rgb(246, 239, 221);
@@ -413,6 +436,9 @@ footer {
    width: 50px;
    height: 50px;
    margin-left: 50%;
+   transition:all 0.2s ease-in-out;
+
+
 }
 
 .leboncoin, .lienMail {
@@ -487,8 +513,13 @@ footer a, aside a {
       margin-left:117px;
       margin-right:117px;
    }
-
-   .prev, .prev{
+   .prev:hover, .next:hover{
+      width:55px;
+      height:55px;
+      padding:7.5px;
+   }
+   .prev, .next{
+      padding:10px;
       width:50px;
       height: 50px;
 
@@ -577,9 +608,16 @@ footer a, aside a {
       margin-right:91.6px;
    }
 
-   .next, .prev{
+   .prev:hover, .next:hover{
+      width:45px;
+      height:45px;
+      padding:7.5px;
+   }
+   .prev, .next{
+      padding:10px;
       width:40px;
       height: 40px;
+
    }
 }
 
