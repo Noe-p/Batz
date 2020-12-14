@@ -4,15 +4,16 @@ const agencement = document.querySelector('.agencement');
 const equipements = document.querySelector('.equipements');
 const photos= document.querySelector('.photos');
 const carte= document.querySelector('.carte');
-const tarif= document.querySelector('.tarif');
+const tarif= document.querySelector('.tarifsInformations');
 
 
 
 //ANIMATION LORS DE L'OUVERTURE D'UNE IMAGE
 
 //Images agencement
-const imageAgencement=".imagesAgencement div";
-const allImageAgencement = document.querySelectorAll(imageAgencement)
+const imageAgencement=".allImageAgencement div";
+const allImageAgencement = document.querySelectorAll(imageAgencement);
+let body = document.querySelector('.body');
 
 allImageAgencement.forEach(imageAgencement => {
    imageAgencement.addEventListener('click', ouvertureImage);
@@ -21,21 +22,18 @@ let drapeau = 1;
 function ouvertureImage() {
    if(drapeau==1){
       this.classList.add('ouvertureImage');
+      body.classList.add('ouvertureImageb');
       drapeau=0;
    }
    else{
       this.classList.remove('ouvertureImage');
+      body.classList.remove('ouvertureImageb');
       drapeau=1;
    }
 }
 
 //ANIMATION DE LA DIV NAVIGATION
-let heightDescription = description.offsetTop-70;
-let heightAgencement = agencement.offsetTop-70;
-let heightEquipements = equipements.offsetTop-70;
-let heightPhotos = photos.offsetTop-70;
-let heightCarte = carte.offsetTop-70;
-let heightTarif = tarif.offsetTop-70;
+let heightNav=nav.offsetHeight
 
 window.addEventListener('scroll', () =>{
    if(window.scrollY > 420){
@@ -44,18 +42,17 @@ window.addEventListener('scroll', () =>{
    else{
       nav.classList.remove('position');
    }
-   if(((window.scrollY > heightDescription) && (window.scrollY < heightAgencement))
-   || ((window.scrollY > heightEquipements) && (window.scrollY < heightPhotos))
-   || ((window.scrollY > heightCarte) && (window.scrollY < heightTarif))){
+
+   if(((window.scrollY > description.offsetTop-heightNav) && (window.scrollY < agencement.offsetTop-heightNav))
+   || ((window.scrollY > equipements.offsetTop-heightNav) && (window.scrollY < photos.offsetTop-heightNav))
+   || ((window.scrollY > carte.offsetTop-heightNav) && (window.scrollY < tarif.offsetTop-heightNav))){
       nav.classList.add('couleur');
    }
-   else if((window.scrollY < heightDescription)
-   || (window.scrollY > heightAgencement)
-   || (window.scrollY > heightPhotos)
-   || (window.scrollY > heightTarif)){
+   else{
       nav.classList.remove('couleur');
    }
-   if(window.scrollY > 4700){
+
+   if(window.scrollY > (carte.offsetTop+carte.offsetHeight-heightNav-60)){
       nav.classList.add('positionFin');
    }
    else{
