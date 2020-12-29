@@ -11,7 +11,7 @@ Il n'y a pas de deadline, le site sera mis à jour en fonction de mes temps libr
 Noé PHILIPPE
 
 ##Démarrage##
-**En local :** Ouverture du fichier index.html
+**En local** : Ouverture du fichier index.html
 **En ligne :** http://location-maison-iledebatz.fr/
 
 ##Contenu##
