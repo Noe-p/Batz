@@ -15,9 +15,10 @@ Noé PHILIPPE
 ## Installation
 
 **En local :**  
-`$ git clone https://github.com/Noe-p/Batz.git`  
-`$ cd ../path/to/the/file`  
-`$ firefox index.html`  
+```bash
+$ git clone https://github.com/Noe-p/Batz.git  
+$ cd Batz/
+$ firefox index.html```
 
 **En ligne :** http://location-maison-iledebatz.fr/
 
