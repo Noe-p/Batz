@@ -12,9 +12,13 @@ Il n'y a pas de deadline, le site sera mis à jour en fonction de mes temps libr
 
 Noé PHILIPPE
 
-## Démarrage
+## Installation
 
-**En local :** Ouverture du fichier index.html
+**En local :** $
+`$ git clone https://github.com/Noe-p/Batz.git
+$ cd ../path/to/the/file
+$ firefox index.html 
+`
 **En ligne :** http://location-maison-iledebatz.fr/
 
 ## Contenu
@@ -22,11 +26,9 @@ Noé PHILIPPE
 **assets :** Contient les images, vidéos et polices du site
 
 
-## Langagages
+## Langages
 
-CSS3
-HTML5
-Javascript
+CSS3, HTML5, Javascript
 
 ## Framework
 
