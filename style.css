@@ -1,21 +1,21 @@
 @font-face {
    font-family: 'GreatVibes-Regular';
-   src: url("polices/great-vibes/GreatVibes-Regular.otf");
+   src: url("assets/fonts/great-vibes/GreatVibes-Regular.otf");
 }
 
 @font-face {
    font-family: 'Raleway-Medium';
-   src: url("polices/raleway/Raleway-Medium.ttf");
+   src: url("assets/fonts/raleway/Raleway-Medium.ttf");
 }
 
 @font-face {
    font-family: 'Raleway-Regular';
-   src: url("polices/raleway/Raleway-Regular.ttf");
+   src: url("assets/fonts/raleway/Raleway-Regular.ttf");
 }
 
 @font-face {
    font-family: 'Lobster';
-   src: url("polices/lobster/Lobster.otf");
+   src: url("assets/fonts/lobster/Lobster.otf");
 }
 
 html {
@@ -71,19 +71,29 @@ p .lienLeboncoin:hover, footer li a:hover, aside a:hover, .navigation.position.c
 /*EN-TETE*/
 header {
    text-align: center;
-   margin-bottom: 30px;
+   width: auto;
+   background-color: rgba(71, 71, 71, 0.6);
 }
 
 #enTete {
-
+   margin-top:150px;
    display: flex;
    justify-content: space-around;
    align-items: center;
+
+
 }
 
-.imageHeader {
-   width: 596px;
-   height: 360px;
+.videoHeader {
+   position:absolute;
+   bottom: 0px;
+   right: 0px;
+   min-width: 100%;
+   min-height: 100%;
+   width:100%;
+   height: auto;
+   z-index: -1;
+   overflow: hidden;
 }
 
 #etoile {
@@ -92,6 +102,7 @@ header {
 }
 
 h1 {
+   color:rgb(246, 239, 221);
    font-size: 6vw;
    font-family: 'GreatVibes-Regular';
    order: 2;
@@ -108,7 +119,8 @@ h1 {
 .menuGauche a, .menuDroit a {
    width: 8vw;
    padding: 7px;
-   border: solid 1px rgb(13, 22, 55);
+   color: rgb(246, 239, 221);
+   border: solid 1px rgb(246, 239, 221);
    border-radius: 3px;
    font-family: 'Lobster';
    font-size: 1.4vw;
@@ -116,36 +128,8 @@ h1 {
    flex-direction: column;
    justify-content: center;
    position: relative;
-   overflow: hidden;
-   transition-property: background-color;
-   transition-duration: 0.5s;
-}
 
-.menuGauche a::before, .menuDroit a::before {
-   content: '';
-   position: absolute;
-   background-color: rgb(13, 22, 55);
-   height: 0%;
-   top: 50%;
-   left: 50%;
-   width: 100%;
-   z-index: -1;
-   opacity: 0;
-   transition: all 0.5s;
-   transform: translate(-50%, -50%) rotate(45deg);
-}
 
-.menuGauche a:hover, .menuDroit a:hover {
-   color: rgb(246, 239, 221);
-}
-
-.menuGauche a:hover::before, .menuDroit a:hover::before {
-   opacity: 1;
-   height: 260%;
-}
-
-.menuGauche a:active::before, .menuDroit a:active::before {
-   height: 370%;
 }
 
 /*NAVIGATION*/

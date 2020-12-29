@@ -72,7 +72,7 @@ $(document).ready(function() {
    $img.css('display', 'none'); // on cache les images
    $currentImg.css('display', 'block'); // on affiche seulement l'image courante
 
-   $carrousel.append('<img class="prev" src="photos/flecheGauche.png"/> <img class="next" src="photos/flecheDroite.png"/>');
+   $carrousel.append('<img class="prev" src="assets/img/flecheGauche.png"/> <img class="next" src="assets/img/flecheDroite.png"/>');
 
    $('.next').click(function() { // image suivante
 

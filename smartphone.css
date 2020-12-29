@@ -53,29 +53,33 @@ h1 {
 /*NAVIGATION*/
 .navigation {
    position: fixed;
-   background-color:rgb(13, 22, 55);
-   height: 100px;
-   width: 100px;
-   border-radius: 10px;
+   background-color:rgba(13, 22, 55, 0.5);
+   height: 170px;
+   width: 170px;
    top:1330px;
    left: 28px;
-   border: solid 2px rgb(246, 239, 221);
    color: rgb(246, 239, 221);
    z-index: 5;
-}
-.navigation p, .navigation a, .navigation h3 {
-   color: rgb(246, 239, 221);
-   font-size: 1em;
-}
+   border: solid 2px rgb(246, 239, 221);
 
+}
+.navigation p, .navigation a {
+   color: rgb(246, 239, 221);
+   font-size:25px;
+}
+.navigation h3{
+   color: rgb(246, 239, 221);
+   font-size:30px;
+}
 .navigation.position {
    top:1330px;
    left: 28px;
 }
 
 .navigation.position.couleur {
-   border: solid 2px rgb(246, 239, 221);
    color: rgb(246, 239, 221);
+   background-color:rgba(13, 22, 55, 0.5);
+
 }
 
 .navigation.position.couleur a {
@@ -115,4 +119,61 @@ h1 {
    margin-right:0px;
    margin-left:0px;
    padding: 10px;
+}
+
+/*PHOTOS*/
+.carrousel img {
+   width: 750px;
+   height: 567px;
+}
+
+#photos #imageVueCambreRouge {
+   width: 318.75px;
+   height: 566.6px;
+   margin-left: 225px;
+   margin-right: 225px;
+}
+
+#photos #ChambreMilieu {
+   width: 425,25px;
+   height: 566.6px;
+   margin-left:225px;
+   margin-right: 225px;
+}
+
+/*CARTE*/
+
+#carte h2 {
+   font-size:70px;
+}
+
+#carte img {
+   width: 1000px;
+   height: 500px;
+}
+
+/*PARTIE TARIF INFORMATION*/
+
+.tarifs, .informations {
+   width: 580px;
+   height: 500px;
+   margin: 20px;
+   border-bottom: solid 2px rgb(13, 22, 55);
+}
+
+/*FOOTER*/
+footer {
+   height: 500px;
+}
+
+.bouton {
+   padding: 5px;
+   width: 80px;
+   height: 80px;
+   margin-left: 70%;
+}
+
+.bouton img{
+   width:70px;
+   height: 70px;
 }
