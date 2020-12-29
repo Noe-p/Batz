@@ -18,7 +18,8 @@ Noé PHILIPPE
 ```bash
 $ git clone https://github.com/Noe-p/Batz.git  
 $ cd Batz/
-$ firefox index.html```
+$ firefox index.html
+```
 
 **En ligne :** http://location-maison-iledebatz.fr/
 
