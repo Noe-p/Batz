@@ -1,7 +1,7 @@
 #Une maison de caractère#
 
 ##Informations##
-Premier projet qui a comme objectif d'aprendre le HTML5, CSS3, Javascript.
+Premier projet qui a pour objectif d'aprendre le HTML5, CSS3 et Javascript.
 L'idée est donc de tester des fonctionnalités, s'entrainer et d'appliquer des idées sans utiliser de Framework ou de Library.
 Il n'y a pas de deadline, le site sera mis à jour en fonction de mes temps libre.
 
