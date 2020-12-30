@@ -36,7 +36,7 @@ function ouvertureImage() {
 let heightNav=nav.offsetHeight
 
 window.addEventListener('scroll', () =>{
-   if(window.scrollY > 420){
+   if(window.scrollY > 480){
       nav.classList.add('position');
    }
    else{
