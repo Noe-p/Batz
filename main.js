@@ -1,10 +1,6 @@
 const nav = document.querySelector('.navigation');
-const description = document.querySelector('.description');
 const agencement = document.querySelector('.agencement');
-const equipements = document.querySelector('.equipements');
-const photos= document.querySelector('.photos');
-const carte= document.querySelector('.carte');
-const tarif= document.querySelector('.tarifsInformations');
+
 
 
 
@@ -33,50 +29,46 @@ function ouvertureImage() {
 }
 
 //ANIMATION DE LA DIV NAVIGATION
-let heightNav=nav.offsetHeight
-let description_agencement= document.querySelector('.description_agencement');
+let conteneurDescription= document.querySelector('.conteneurDescription');
 
 window.addEventListener('scroll', () =>{
-   if(window.scrollY > description_agencement.offsetTop){
+   if(window.scrollY > conteneurDescription.offsetTop){
       nav.classList.add('position');
    }
    else{
       nav.classList.remove('position');
    }
 
-   if(((window.scrollY > description.offsetTop-heightNav) && (window.scrollY < agencement.offsetTop-heightNav))
-   || ((window.scrollY > equipements.offsetTop-heightNav) && (window.scrollY < photos.offsetTop-heightNav))
-   || ((window.scrollY > carte.offsetTop-heightNav) && (window.scrollY < tarif.offsetTop-heightNav))){
-      nav.classList.add('couleur');
-   }
-   else{
-      nav.classList.remove('couleur');
-   }
-
-   if(window.scrollY > (carte.offsetTop+carte.offsetHeight-heightNav-60)){
-      nav.classList.add('positionFin');
-   }
-   else{
-      nav.classList.remove('positionFin');
-   }
 });
 
 //DESCRIPTION
 let articleDescription= document.querySelector('.articleDescription');
-let vueDuCiel= document.querySelector('.vueDuCiel');
+let lastPhoto= document.querySelector('.lastPhoto');
 
 window.addEventListener('scroll', () =>{
-   if(window.scrollY > description_agencement.offsetTop){
+   if(window.scrollY > conteneurDescription.offsetTop){
       articleDescription.classList.add('position');
    }
    else{
       articleDescription.classList.remove('position');
    }
 
-   if(window.scrollY > vueDuCiel.offsetTop){
+   if(window.scrollY > lastPhoto.offsetTop){
       articleDescription.classList.add('positionFin');
    }
    else{
       articleDescription.classList.remove('positionFin');
+   }
+});
+
+//AGENCEMENT
+let articleAgencement= document.querySelector('.articleAgencement');
+
+window.addEventListener('scroll', () =>{
+   if(window.scrollY > lastPhoto.offsetTop){
+      articleAgencement.classList.add('animation');
+   }
+   else{
+      articleAgencement.classList.remove('animation');
    }
 });

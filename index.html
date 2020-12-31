@@ -31,13 +31,17 @@
 
       </section>
 
-      <video class="videoHeader" src="assets/img/intro.mp4" poster="header.png" loop="loop" alt="video" preload="auto" autoplay="true" muted="muted" volume="0"/>
+      <video class="videoHeader" preload="auto" loop autoplay="true" >
+            <source src="assets/img/intro.mp4" type="video/mp4">
+            <source src="assets/img/intro.webm" type="video/webm">
+            Votre navigateur ne gère pas l'élément <code>video</code>.
+      </video>
 
    </header>
 
 
 
-   <section class="description_agencement">
+   <section class="conteneurDescription">
 
 
       <section class="description" id="descriptionID">
@@ -47,11 +51,9 @@
          </aside>
 
          <div class="photosDescription">
+            <img src="assets/img/vueDuCiel.png" />
             <img src="assets/img/maison.JPG" />
-            <img src="assets/img/vueCuisine.JPG" />
-            <img src="assets/img/vueMer.png" />
-            <img class="vueDuCiel" src="assets/img/vueDuCiel.png" />
-
+            <img class="lastPhoto" src="assets/img/vueCuisine.JPG" />
          </div>
 
          <article class="articleDescription">
@@ -71,7 +73,7 @@
    </section>
 
    <section class="agencement" id="agencementID">
-      <article id="articleAgencement">
+      <article class="articleAgencement">
          <h2>Agencement</h2>
          <p class="textAgencement">
             <span>Rez de chaussée :</span> Grand salon séjour, cuisine gaz et électrique,
