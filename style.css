@@ -71,7 +71,7 @@ p .lienLeboncoin:hover, footer li a:hover, aside a:hover, .navigation.position.c
 /*EN-TETE*/
 header {
    text-align: center;
-   background-color: rgba(79, 79, 79, 0.5);
+   background-color: rgba(38, 38, 38, 0.3);
    position: relative;
    height:55vw;
 }
@@ -160,8 +160,7 @@ h1 {
   position: relative;
   width: 100%;
   z-index: -5;
-  background: url(header.png) no-repeat;
-  background-size: cover;
+
 }
 
 
@@ -214,7 +213,7 @@ h1 {
 }
 
 /*PARTIE DESCRIPTION*/
-.description_agencement{
+.conteneurDescription{
    background-color: rgb(13, 22, 55);
    color: rgb(246, 239, 221);
 }
@@ -258,19 +257,36 @@ h1 {
 
 }
 .articleDescription.positionFin{
-   top:-50%;
+   top:-500px;
    transition: all 0.5s ease-in-out;
-
 }
 /*PARTIE AGENCEMENT*/
 #agencementID {
    background-color: rgb(246, 239, 221);
    color:rgb(13, 22, 55);
-   margin-top:100px;
    padding: 30px;
    display: flex;
    flex-direction: column;
    align-items: center;
+   height: 1000px;
+}
+
+.articleAgencement {
+   opacity: 0;
+   width: 700px;
+   padding-left: 200px;
+   padding-right: 200px;
+   text-align: left;
+   margin-bottom: 10px;
+   border: solid 2px rgb(13, 22, 55);
+   border-radius: 7px;
+   transition: all 3s;
+
+}
+.articleAgencement.animation{
+   transition: all 1.5s;
+   opacity: 1;
+
 }
 
 .allImageAgencement {
@@ -280,7 +296,6 @@ h1 {
    justify-content: center;
    flex-wrap: wrap;
 }
-
 
 .imageAgencement {
    width: 400px;
@@ -312,15 +327,6 @@ h1 {
    filter: none;
 }
 
-#articleAgencement {
-   width: 700px;
-   padding-left: 200px;
-   padding-right: 200px;
-   text-align: left;
-   margin-bottom: 10px;
-   border: solid 2px rgb(13, 22, 55);
-   border-radius: 7px;
-}
 
 /*PARTIE EQUIPEMENT*/
 #equipementsID {
@@ -341,7 +347,7 @@ h1 {
 }
 
 #listeEquipementsDroite li, #listeEquipementsGauche li {
-   list-style-image: url('photos/checkV2.png');
+   list-style-image: url('assets/img/checkV2.png');
 }
 
 /*PHOTOS*/
