@@ -20,7 +20,7 @@
 
 html {
    scroll-behavior: smooth;
-margin: 0;
+   margin: 0;
 }
 
 body {
@@ -36,7 +36,7 @@ h2 {
    font-family: "Raleway-Medium";
 }
 
-h3, p{
+h3, p {
    font-size: 1em;
 }
 
@@ -69,21 +69,26 @@ p .lienLeboncoin:hover, footer li a:hover, aside a:hover, .navigation.position.c
 }
 
 /*EN-TETE*/
-header {
+#enTete{
+   position: absolute;
+   top:0;
+   left:0;
+   width: 100%;
+   background-color: rgba(88, 88, 88, 0.3);
+   display: flex;
+   justify-content: center;
    text-align: center;
-   background-color: rgba(38, 38, 38, 0.3);
-   position: relative;
    height:55vw;
+   z-index: 2;
 }
-
 h1 {
-   color:rgb(246, 239, 221);
+   color: rgb(246, 239, 221);
    font-size: 6vw;
    font-family: 'GreatVibes-Regular';
    position: absolute;
-   top:10%;
+   top: 10%;
    left: 50%;
-   transform: translate(-50%,-50%);
+   transform: translate(-50%, -50%);
    animation-duration: 3s;
    animation-name: titre;
 }
@@ -94,56 +99,67 @@ h1 {
       opacity: 0;
       animation-delay: 3s;
    }
-   to {opacity: 1;}
+
+   to {
+      opacity: 1;
+   }
 }
+
 .menuGauche a, .menuDroit a {
    display: flex;
    justify-content: center;
-   width:10vw;
-   padding:10px;
+   width: 10vw;
+   padding: 10px;
    padding-left: 20px;
    padding-right: 20px;
    margin: 10px;
    color: rgb(246, 239, 221);
    border: solid 1px rgb(246, 239, 221);
-   border-radius:10px;
+   border-radius: 10px;
    font-family: 'Lobster';
    font-size: 1.4vw;
-   background-color:rgba(255, 255, 255, 0.2);
+   background-color: rgba(255, 255, 255, 0.2);
    transition: all 0.3s;
 }
 
-.menuGauche, .menuDroit{
+.menuGauche, .menuDroit {
    position: absolute;
-   top:50%;
-   transform: translate(-50%,-50%);
+   top: 50%;
+   transform: translate(-50%, -50%);
    animation-duration: 5.5s;
    animation-name: menu;
    animation-timing-function: ease-in-out;
 }
 
-.menuDroit{left:75%;}
-.menuGauche{left:25%;}
+.menuDroit {
+   left: 75%;
+}
+
+.menuGauche {
+   left: 25%;
+}
 
 @keyframes menu {
-   from{top:47%; opacity:0;}
+   from {
+      top: 47%;
+      opacity: 0;
+   }
 }
 
 .menuGauche a:hover, .menuDroit a:hover {
-   background-color:rgba(13, 22, 55, 0.4);
+   background-color: rgba(13, 22, 55, 0.4);
    border: solid 1px rgb(13, 22, 55);
    padding-left: 0px;
    padding-right: 0px;
    margin-left: 30px;
    margin-right: 30px;
-
 }
 
-#flecheBas{
+#flecheBas {
    position: absolute;
-   top:82%;
-   width:4vw;
-   height:4vw;
+   top: 82%;
+   width: 4vw;
+   height: 4vw;
    animation-duration: 3s;
    animation-name: flecheBas;
    animation-iteration-count: infinite;
@@ -151,182 +167,144 @@ h1 {
 }
 
 @keyframes flecheBas {
-   0% {opacity: 0; top:65%;}
-   50% {opacity:1; }
-   100% {opacity:0; }
+   0% {
+      opacity: 0;
+      top: 65%;
+   }
+
+   50% {
+      opacity: 1;
+   }
+
+   100% {
+      opacity: 0;
+   }
 }
 
 .videoHeader {
-  position: relative;
-  width: 100%;
-  z-index: -5;
-
+   position: relative;
+   width:100%;
 }
-
 
 /*NAVIGATION*/
 .navigation {
    text-align: center;
-   width:7%;
+   width: 7%;
    border-radius: 10px;
-   border: solid 2px rgb(246, 239, 221);
-   background-color:rgba(13, 22, 55, 0.3);
-   color: rgb(246, 239, 221);
+   border: solid 1px rgb(13, 22, 55);
+   background-color: rgba(246, 239, 221, 0.5);
+   color: (246, 239, 221);
    position: absolute;
-   top: 57vw;
-   left:1.5%;
-   transition-property: left, border;
-   transition-duration: 0.4s;
+   top: 60vw;
+   left: 1.5%;
+   transition-property: color, border, background-color;
+   transition-duration: 0.5s;
    transition-timing-function: ease-in-out;
 }
 
 .navigation.position {
    position: fixed;
    top: 30px;
-   left:1.5%;
 }
 
 .navigation.position.couleur {
-   border: solid 2px rgb(246, 239, 221);
+   border: solid 1px rgb(246, 239, 221);
    color: rgb(246, 239, 221);
+   background-color: rgba(13, 22, 55, 0.3);
 }
 
 .navigation.position.couleur a {
    color: rgb(246, 239, 221);
 }
 
-.navigation.position.couleur.positionFin, .navigation.position.positionFin {
-   visibility: hidden;
-}
-
 .navigation h3 {
    font-size: 1.2vw;
-   transition-property: color, border;
-   transition-duration: 0.4s;
 }
 
 .navigation p, .navigation a {
-   color: rgb(246, 239, 221);
+   color: rgb(13, 22, 55);
    font-size: 0.9vw;
-   transition-property: color, border;
-   transition-duration: 0.4s;
+   transition: all 0.5s ease-in-out;
 }
 
 /*PARTIE DESCRIPTION*/
-.conteneurDescription{
-   background-color: rgb(13, 22, 55);
-   color: rgb(246, 239, 221);
-}
-
-.description{
+.description {
+   color: rgb(13, 22, 55);
    display: flex;
-   align-items:flex-start;
-   padding-top: 80px;
+   justify-content: space-between;
+   margin-top: 30px;
 }
-.photosDescription{
-   display: flex;
-   flex-direction: column;
-   margin-left:10.5%;
-}
-.photosDescription img {
-   margin-bottom:50px;
-   width:50%;
-   padding: 10px;
-   border: solid 2px rgb(246, 239, 221);
-   border-radius: 7px;
-}
-
 
 .articleDescription {
-   position: absolute;
-   top:65vw;
-   right:6%;;
-   text-align: center;
-   width:30vw;
+   position: relative;
+   right: 6%;
+   text-align: left;
+   width: 30%;
+   height: 5%;
    padding: 10px;
-   border: solid 2px rgb(246, 239, 221);
+   border: solid 1px rgb(13, 22, 55);
    border-radius: 7px;
-
+   margin-top: 2%;
 }
 
-.articleDescription.position{
-   top:180px;
-   position: fixed;
-   right:6%;
-
-
+.photosDescription {
+   position: relative;
+   width: auto;
+   left: 10%;
+   display: flex;
+   flex-direction: column;
 }
-.articleDescription.positionFin{
-   top:-500px;
-   transition: all 0.5s ease-in-out;
+
+.photosDescription img {
+   margin-bottom: 50px;
+   width: 45vw;
+   border-radius: 2px;
 }
+
 /*PARTIE AGENCEMENT*/
 #agencementID {
-   background-color: rgb(246, 239, 221);
-   color:rgb(13, 22, 55);
-   padding: 30px;
+   background-color: rgb(13, 22, 55);
+   color: rgb(246, 239, 221);
+   padding: 3vw;
    display: flex;
    flex-direction: column;
    align-items: center;
-   height: 1000px;
 }
 
 .articleAgencement {
-   opacity: 0;
-   width: 700px;
-   padding-left: 200px;
-   padding-right: 200px;
-   text-align: left;
-   margin-bottom: 10px;
-   border: solid 2px rgb(13, 22, 55);
+   width: 50%;
+   padding-left: 20%;
+   padding-right: 20%;
+   border: solid 1px rgb(246, 239, 221);
    border-radius: 7px;
-   transition: all 3s;
-
-}
-.articleAgencement.animation{
-   transition: all 1.5s;
-   opacity: 1;
-
 }
 
-.allImageAgencement {
-   height: auto;
+.imagesAgencement {
+   margin-top: 2vw;
    display: flex;
    align-items: center;
-   justify-content: center;
-   flex-wrap: wrap;
+   justify-content: space-between;
+   width: 90%;
 }
 
-.imageAgencement {
-   width: 400px;
-   height: 400px;
-   border: solid 2px rgb(13, 22, 55);
+.imagesAgencement img {
+   position: relative;
+   width: 30%;
+   border: solid 1px rgb(246, 239, 221);
    border-radius: 7px;
    padding: 10px;
-   margin: 10px;
+   transition: all 0.3s ease-in-out;
 }
 
-.ouvertureImage {
-   position: fixed;
-   top: 0;
-   left: 0;
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   width: 100%;
-   height: 100%;
-   z-index: 6;
-   background-color: rgba(176, 176, 176, 0.81);
+.img1:hover, .img2:hover, .img3:hover {
+   width: 29%;
+   margin: 0.5%;
+   cursor: pointer;
 }
 
-.ouvertureImage img:hover, .ouvertureImage img {
-   border: none;
-   width: 600px;
-   height: 600px;
-   z-index: 2;
-   filter: none;
+.im1:active {
+   transform: rotateX(90deg);
 }
-
 
 /*PARTIE EQUIPEMENT*/
 #equipementsID {
@@ -363,18 +341,6 @@ h1 {
    transition-timing-function: ease-in-out;
 }
 
-.prev {
-   order: 1;
-}
-
-.carrousel {
-   order: 2;
-}
-
-.next {
-   order: 3;
-}
-
 .carrousel img {
    width: 800px;
    height: 605px;
@@ -383,7 +349,6 @@ h1 {
    border: solid 2px rgb(13, 22, 55);
    border-radius: 7px;
 }
-
 
 #photos #imageVueCambreRouge {
    width: 340px;
@@ -502,10 +467,6 @@ footer a, aside a {
       width: 773.5px;
       height: 420.7px;
    }
-
-
-
-
 }
 
 @media screen and (max-width:1140px) {
@@ -595,7 +556,6 @@ footer a, aside a {
       padding-right: 5px;
    }
 
-
    .bouton {
       margin-left: 65%;
    }
@@ -639,7 +599,6 @@ footer a, aside a {
       width: 417.2px;
       height: 252px;
    }
-
 
    #articleAgencement {
       width: 400px;

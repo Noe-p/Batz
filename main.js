@@ -1,74 +1,44 @@
-const nav = document.querySelector('.navigation');
-const agencement = document.querySelector('.agencement');
 
+//BOX
+let nav = document.querySelector('.navigation');
 
+//POSITION
+let agencement = document.querySelector('.agencement');
 
-
-//ANIMATION LORS DE L'OUVERTURE D'UNE IMAGE
-
-//Images agencement
-const imageAgencement=".allImageAgencement div";
-const allImageAgencement = document.querySelectorAll(imageAgencement);
-let body = document.querySelector('.body');
-
-allImageAgencement.forEach(imageAgencement => {
-   imageAgencement.addEventListener('click', ouvertureImage);
-});
-let drapeau = 1;
-function ouvertureImage() {
-   if(drapeau==1){
-      this.classList.add('ouvertureImage');
-      body.classList.add('ouvertureImageb');
-      drapeau=0;
-   }
-   else{
-      this.classList.remove('ouvertureImage');
-      body.classList.remove('ouvertureImageb');
-      drapeau=1;
-   }
-}
 
 //ANIMATION DE LA DIV NAVIGATION
-let conteneurDescription= document.querySelector('.conteneurDescription');
+let description= document.querySelector('.description');
 
 window.addEventListener('scroll', () =>{
-   if(window.scrollY > conteneurDescription.offsetTop){
+   if(window.scrollY > description.offsetTop){
       nav.classList.add('position');
    }
    else{
       nav.classList.remove('position');
    }
 
-});
-
-//DESCRIPTION
-let articleDescription= document.querySelector('.articleDescription');
-let lastPhoto= document.querySelector('.lastPhoto');
-
-window.addEventListener('scroll', () =>{
-   if(window.scrollY > conteneurDescription.offsetTop){
-      articleDescription.classList.add('position');
+   if(window.scrollY > agencement.offsetTop-nav.offsetHeight){
+      nav.classList.add('couleur');
    }
    else{
-      articleDescription.classList.remove('position');
-   }
-
-   if(window.scrollY > lastPhoto.offsetTop){
-      articleDescription.classList.add('positionFin');
-   }
-   else{
-      articleDescription.classList.remove('positionFin');
+      nav.classList.remove('couleur');
    }
 });
 
-//AGENCEMENT
-let articleAgencement= document.querySelector('.articleAgencement');
+//PARALLAX DESCRIPTION
+function parallax(a, b, c, d, e){
+   window.addEventListener('scroll', () => {
+      if(window.scrollY >= a.offsetTop){
+         let j=window.scrollY-description.offsetTop;
+         b.style["top"] = (j/d)+"%";
+         c.style["top"] = (j/e)+"%";
+      }
+   });
+}
 
-window.addEventListener('scroll', () =>{
-   if(window.scrollY > lastPhoto.offsetTop){
-      articleAgencement.classList.add('animation');
-   }
-   else{
-      articleAgencement.classList.remove('animation');
-   }
-});
+let conteneur = document.querySelector('.description');
+let gauche = document.querySelector('.photosDescription');
+let droite = document.querySelector('.articleDescription');
+
+
+parallax(conteneur, gauche, droite, 500, 19);
