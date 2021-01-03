@@ -41,4 +41,4 @@ let gauche = document.querySelector('.photosDescription');
 let droite = document.querySelector('.articleDescription');
 
 
-parallax(conteneur, gauche, droite, 500, 19);
+parallax(conteneur, gauche, droite, 500, 19.5);

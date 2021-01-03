@@ -69,18 +69,25 @@ p .lienLeboncoin:hover, footer li a:hover, aside a:hover, .navigation.position.c
 }
 
 /*EN-TETE*/
-#enTete{
+#enTete {
    position: absolute;
-   top:0;
-   left:0;
-   width: 100%;
-   background-color: rgba(88, 88, 88, 0.3);
+   width: 100vw;
+   height: 100vh;
+   background-color:rgba(0, 0, 0, 0.2);
    display: flex;
    justify-content: center;
    text-align: center;
-   height:55vw;
-   z-index: 2;
 }
+
+.videoHeader {
+   position: relative;
+   object-fit: cover;
+   width: 100vw;
+   height: 100vh;
+   z-index: -2;
+
+}
+
 h1 {
    color: rgb(246, 239, 221);
    font-size: 6vw;
@@ -157,7 +164,7 @@ h1 {
 
 #flecheBas {
    position: absolute;
-   top: 82%;
+   top: 95%;
    width: 4vw;
    height: 4vw;
    animation-duration: 3s;
@@ -169,7 +176,7 @@ h1 {
 @keyframes flecheBas {
    0% {
       opacity: 0;
-      top: 65%;
+      top: 70%;
    }
 
    50% {
@@ -181,11 +188,6 @@ h1 {
    }
 }
 
-.videoHeader {
-   position: relative;
-   width:100%;
-}
-
 /*NAVIGATION*/
 .navigation {
    text-align: center;
@@ -195,7 +197,7 @@ h1 {
    background-color: rgba(246, 239, 221, 0.5);
    color: (246, 239, 221);
    position: absolute;
-   top: 60vw;
+   top: 108%;
    left: 1.5%;
    transition-property: color, border, background-color;
    transition-duration: 0.5s;
@@ -204,7 +206,7 @@ h1 {
 
 .navigation.position {
    position: fixed;
-   top: 30px;
+   top: 5%;
 }
 
 .navigation.position.couleur {
@@ -232,7 +234,7 @@ h1 {
    color: rgb(13, 22, 55);
    display: flex;
    justify-content: space-between;
-   margin-top: 30px;
+   padding-top: 30px;
 }
 
 .articleDescription {
@@ -245,6 +247,7 @@ h1 {
    border: solid 1px rgb(13, 22, 55);
    border-radius: 7px;
    margin-top: 2%;
+   z-index: 2;
 }
 
 .photosDescription {
