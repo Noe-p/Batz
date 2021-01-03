@@ -71,7 +71,7 @@ p .lienLeboncoin:hover, footer li a:hover, aside a:hover, .navigation.position.c
 /*EN-TETE*/
 #enTete {
    position: absolute;
-   width: 100vw;
+   width: 99.4vw;
    height: 100vh;
    background-color:rgba(0, 0, 0, 0.2);
    display: flex;
@@ -82,7 +82,7 @@ p .lienLeboncoin:hover, footer li a:hover, aside a:hover, .navigation.position.c
 .videoHeader {
    position: relative;
    object-fit: cover;
-   width: 100vw;
+   width: 99.4vw;
    height: 100vh;
    z-index: -2;
 
@@ -275,15 +275,19 @@ h1 {
 }
 
 .articleAgencement {
+   position: relative;
+   opacity: 0;
    width: 50%;
-   padding-left: 20%;
-   padding-right: 20%;
+   padding-left: 15%;
+   padding-right: 15%;
    border: solid 1px rgb(246, 239, 221);
    border-radius: 7px;
 }
 
 .imagesAgencement {
-   margin-top: 2vw;
+   position: relative;
+   opacity: 0;
+   margin-top: 1%;
    display: flex;
    align-items: center;
    justify-content: space-between;
@@ -295,24 +299,13 @@ h1 {
    width: 30%;
    border: solid 1px rgb(246, 239, 221);
    border-radius: 7px;
-   padding: 10px;
-   transition: all 0.3s ease-in-out;
+   padding:1%;
 }
 
-.img1:hover, .img2:hover, .img3:hover {
-   width: 29%;
-   margin: 0.5%;
-   cursor: pointer;
-}
-
-.im1:active {
-   transform: rotateX(90deg);
-}
 
 /*PARTIE EQUIPEMENT*/
 #equipementsID {
-   background-color: rgb(13, 22, 55);
-   color: rgb(246, 239, 221);
+   color: rgb(13, 22, 55);
    align-items: center;
    text-align: center;
    padding: 10px;
@@ -473,15 +466,7 @@ footer a, aside a {
 }
 
 @media screen and (max-width:1140px) {
-   #articleAgencement {
-      padding-left: 50px;
-      padding-right: 50px;
-   }
 
-   .carrousel img {
-      width: 500px;
-      height: 378px;
-   }
 
    #photos #imageVueCambreRouge {
       width: 212.5px;
@@ -497,28 +482,12 @@ footer a, aside a {
       margin-right: 117px;
    }
 
-   .prev:hover, .next:hover {
-      width: 55px;
-      height: 55px;
-      padding: 7.5px;
-   }
-
-   .prev, .next {
-      padding: 10px;
-      width: 50px;
-      height: 50px;
-   }
 }
 
 @media screen and (max-width:1010px) {
    #carte img {
       width: 541.45px;
       height: 294.49px;
-   }
-
-   #imageAgencement img {
-      width: 250px;
-      height: 250px;
    }
 }
 
@@ -543,32 +512,12 @@ footer a, aside a {
       height: 205.8px;
    }
 
-   .imagesAgencement img {
-      width: 175px;
-      height: 175px;
-   }
-
-   .ouvertureImage img {
-      width: 430px;
-      height: 430px;
-   }
-
-   #articleAgencement {
-      width: 500px;
-      padding-left: 5px;
-      padding-right: 5px;
-   }
-
    .bouton {
       margin-left: 65%;
    }
 }
 
 @media screen and (max-width:685px) {
-   .carrousel img {
-      width: 400px;
-      height: 302.5px;
-   }
 
    #photos #imageVueCambreRouge {
       width: 170px;
@@ -584,28 +533,9 @@ footer a, aside a {
       margin-right: 91.6px;
    }
 
-   .prev:hover, .next:hover {
-      width: 45px;
-      height: 45px;
-      padding: 7.5px;
-   }
-
-   .prev, .next {
-      padding: 10px;
-      width: 40px;
-      height: 40px;
-   }
 }
 
 @media screen and (max-width:630px) {
-   .imageHeader {
-      width: 417.2px;
-      height: 252px;
-   }
-
-   #articleAgencement {
-      width: 400px;
-   }
 
    .tarifs, .informations {
       width: 580px;
