@@ -79,6 +79,7 @@ p .lienLeboncoin:hover, footer li a:hover, aside a:hover, .navigation.position.c
    justify-content: center;
    width: 100%;
    height:100%;
+   z-index: 1;
 }
 
 video{
