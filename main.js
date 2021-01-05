@@ -57,5 +57,5 @@ function parallaxInversee(a, b, i, k){
    });
 }
 
-//parallaxInversee(intem1, intem2, vitesseItem1, vitesseItem2)
-parallaxInversee('.articleAgencement', '.imagesAgencement',90, 30);
+//parallaxInversee(item1, item2, vitesseItem1, vitesseItem2)
+parallaxInversee('.articleAgencement', '.imagesAgencement',90, 55);

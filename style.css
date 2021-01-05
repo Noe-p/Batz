@@ -31,13 +31,13 @@ body {
 }
 
 h2 {
-   font-size: 2em;
+   font-size: 2vw;
    text-align: center;
    font-family: "Raleway-Medium";
 }
 
 h3, p {
-   font-size: 1em;
+   font-size: 1vw;
 }
 
 ul {
@@ -71,21 +71,20 @@ p .lienLeboncoin:hover, footer li a:hover, aside a:hover, .navigation.position.c
 /*EN-TETE*/
 #enTete {
    position: absolute;
-   width: 99.4vw;
-   height: 100vh;
-   background-color:rgba(0, 0, 0, 0.2);
+   top: 0;
+   left:0;
+   background-color: rgba(0, 0, 0, 0.3);
    display: flex;
+   align-items: center;
    justify-content: center;
-   text-align: center;
+   width: 100%;
+   height:100%;
 }
 
-.videoHeader {
-   position: relative;
+video{
+   width:100%;
+   height:100vh;
    object-fit: cover;
-   width: 99.4vw;
-   height: 100vh;
-   z-index: -2;
-
 }
 
 h1 {
@@ -164,7 +163,7 @@ h1 {
 
 #flecheBas {
    position: absolute;
-   top: 95%;
+   top: 90%;
    width: 4vw;
    height: 4vw;
    animation-duration: 3s;
@@ -275,6 +274,7 @@ h1 {
 }
 
 .articleAgencement {
+   background-color: rgb(13, 22, 55);
    position: relative;
    opacity: 0;
    width: 50%;
@@ -282,6 +282,7 @@ h1 {
    padding-right: 15%;
    border: solid 1px rgb(246, 239, 221);
    border-radius: 7px;
+   z-index: 2;
 }
 
 .imagesAgencement {
@@ -299,9 +300,8 @@ h1 {
    width: 30%;
    border: solid 1px rgb(246, 239, 221);
    border-radius: 7px;
-   padding:1%;
+   padding: 1%;
 }
-
 
 /*PARTIE EQUIPEMENT*/
 #equipementsID {
@@ -321,7 +321,12 @@ h1 {
 }
 
 #listeEquipementsDroite li, #listeEquipementsGauche li {
-   list-style-image: url('assets/img/checkV2.png');
+   font-size: 100%;
+   list-style-type: none;
+   background-image: url('assets/img/verifier.png');
+   background-repeat: no-repeat;
+   background-position: 0 0.32em;
+   padding-left: 15px;
 }
 
 /*PHOTOS*/
@@ -338,8 +343,7 @@ h1 {
 }
 
 .carrousel img {
-   width: 800px;
-   height: 605px;
+   width: 20vw;
    padding: 10px;
    margin: 10px;
    border: solid 2px rgb(13, 22, 55);
@@ -347,8 +351,7 @@ h1 {
 }
 
 #photos #imageVueCambreRouge {
-   width: 340px;
-   height: 605px;
+   width: 20vw;
    margin-left: 240px;
    margin-right: 240px;
 }
@@ -466,8 +469,6 @@ footer a, aside a {
 }
 
 @media screen and (max-width:1140px) {
-
-
    #photos #imageVueCambreRouge {
       width: 212.5px;
       height: 378px;
@@ -481,7 +482,6 @@ footer a, aside a {
       margin-left: 117px;
       margin-right: 117px;
    }
-
 }
 
 @media screen and (max-width:1010px) {
@@ -492,15 +492,6 @@ footer a, aside a {
 }
 
 @media screen and (max-width:885px) {
-   h1 {
-      font-size: 4em;
-   }
-
-   .menuGauche a, .menuDroit a {
-      font-size: 0.9em;
-      width: 70px;
-   }
-
    .navigation {
       display: none;
    }
@@ -518,7 +509,6 @@ footer a, aside a {
 }
 
 @media screen and (max-width:685px) {
-
    #photos #imageVueCambreRouge {
       width: 170px;
       height: 302.2px;
@@ -532,11 +522,9 @@ footer a, aside a {
       margin-left: 91.6px;
       margin-right: 91.6px;
    }
-
 }
 
 @media screen and (max-width:630px) {
-
    .tarifs, .informations {
       width: 580px;
       height: 250px;
