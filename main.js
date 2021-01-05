@@ -26,21 +26,22 @@ window.addEventListener('scroll', () =>{
 });
 
 //PARALLAX DESCRIPTION
-function parallaxDescription(a, b, c, d, e){
+function parallaxDescription(a, b, c){
    let conteneur = document.querySelector(a);
-   let item1 = document.querySelector(b);
-   let item2 = document.querySelector(c);
+   let item = document.querySelector(b);
    window.addEventListener('scroll', () => {
-      if(window.scrollY >= conteneur.offsetTop){
-         let j=window.scrollY-description.offsetTop;
-         item1.style["top"] = (j/d)+"%";
-         item2.style["top"] = (j/e)+"%";
+      if((window.scrollY >= conteneur.offsetTop) && (window.scrollY < conteneur.offsetTop+conteneur.offsetHeight)){
+         let j=window.scrollY-conteneur.offsetTop;
+         item.style.marginTop = (j/c)+'%';
+      }
+      else {
+         item.style.marginTop = "0%";
       }
    });
 }
 
-//parallaxDescription(item1, item2, conteneur, reglage1, reglage2)
-parallaxDescription('.description', '.photosDescription', '.articleDescription', 500, 19.5);
+//parallaxDescription(conteneur, item, vitesseItem)
+parallaxDescription('.description', '.articleDescription', 19.8);
 
 //PARALLAX INVERSEE AGENCEMENT
 function parallaxInversee(a, b, i, k){

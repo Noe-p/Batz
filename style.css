@@ -37,7 +37,7 @@ h2 {
 }
 
 h3, p {
-   font-size: 1vw;
+   font-size: 1em;
 }
 
 ul {
@@ -234,11 +234,12 @@ h1 {
    color: rgb(13, 22, 55);
    display: flex;
    justify-content: space-between;
-   padding-top: 30px;
+   padding-top: 2%;
 }
 
 .articleDescription {
    position: relative;
+   margin-top:0;
    right: 6%;
    text-align: left;
    width: 30%;
@@ -246,12 +247,12 @@ h1 {
    padding: 10px;
    border: solid 1px rgb(13, 22, 55);
    border-radius: 7px;
-   margin-top: 2%;
    z-index: 2;
 }
 
 .photosDescription {
    position: relative;
+   margin-top:0%;
    width: auto;
    left: 10%;
    display: flex;
