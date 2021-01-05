@@ -278,7 +278,6 @@ h1 {
 .articleAgencement {
    background-color: rgb(13, 22, 55);
    position: relative;
-   opacity: 0;
    width: 50%;
    padding-left: 15%;
    padding-right: 15%;
@@ -289,12 +288,12 @@ h1 {
 
 .imagesAgencement {
    position: relative;
-   opacity: 0;
    margin-top: 1%;
    display: flex;
    align-items: center;
    justify-content: space-between;
    width: 90%;
+
 }
 
 .imagesAgencement img {

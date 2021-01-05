@@ -44,19 +44,22 @@ function parallaxDescription(a, b, c){
 parallaxDescription('.description', '.articleDescription', 19.8);
 
 //PARALLAX INVERSEE AGENCEMENT
-function parallaxInversee(a, b, i, k){
+function parallaxInversee(c, a, b, i, k){
+   let conteneur = document.querySelector(c);
    let item1 = document.querySelector(a)
    let item2 = document.querySelector(b);
    window.addEventListener('scroll', () => {
-      if(window.scrollY >= agencement.offsetTop-screen.availHeight){
-         let j=window.scrollY-agencement.offsetTop;
-         item1.style["opacity"] = "1";
-         item1.style["top"] =1-(j/i)+"%";
-         item2.style["opacity"] = "1";
-         item2.style["top"] =1-(j/k)+"%";
+      if((window.scrollY >= conteneur.offsetTop-screen.availHeight) && (window.scrollY < conteneur.offsetTop+conteneur.offsetHeight)){
+         let j=window.scrollY-conteneur.offsetTop;
+         item1.style.marginTop =1-(j/i)+"%";
+         item2.style.marginTop =1-(j/k)+"%";
+      }
+      else {
+         item1.style.marginTop= "0%";
+         item2.style.marginTop = "-15%";
       }
    });
 }
 
-//parallaxInversee(item1, item2, vitesseItem1, vitesseItem2)
-parallaxInversee('.articleAgencement', '.imagesAgencement',90, 55);
+//parallaxInversee(conteneur, item1, item2, vitesseItem1, vitesseItem2)
+parallaxInversee('.agencement', '.articleAgencement', '.imagesAgencement',90, 55);
