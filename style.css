@@ -284,6 +284,7 @@ h1 {
    border: solid 1px rgb(246, 239, 221);
    border-radius: 7px;
    z-index: 2;
+   transition: all 0.2s;
 }
 
 .imagesAgencement {
@@ -293,15 +294,49 @@ h1 {
    align-items: center;
    justify-content: space-between;
    width: 90%;
-
 }
 
 .imagesAgencement img {
    position: relative;
    width: 30%;
+   top:10px;
    border: solid 1px rgb(246, 239, 221);
    border-radius: 7px;
    padding: 1%;
+   transition: top 0.5s;
+}
+
+
+.imagesAgencement img:hover{
+   cursor: pointer;
+   border-color: rgb(235, 165, 0);
+   margin-top:0;
+   top:0px;
+}
+
+.imagesAgencement img.open{
+   position: fixed;
+   top: 0;
+   left: 0;
+   background-color: rgba(60, 60, 60, 0.5);
+   padding-left:30%;
+   padding-right:30%;
+   padding-top:4%;
+   padding-bottom:4%;
+   border: none;
+   border-radius: 0;
+   width: 40%;
+   z-index: 2;
+   animation-name: openImg;
+   animation-duration: 0.5s;
+   animation-timing-function: ease-in-out;
+}
+
+@keyframes openImg {
+   from{
+      transform: rotateX(90deg);
+      background-color: rgba(0, 0, 0, 1);
+   }
 }
 
 /*PARTIE EQUIPEMENT*/
