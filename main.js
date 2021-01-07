@@ -62,20 +62,12 @@ parallaxInversee('.agencement', '.articleAgencement', '.imagesAgencement', 90, 5
 //OUVERTURE PHOTOS
 function ouvrirImage(conteneur){
    let image = document.querySelector(conteneur).children;
-   let drapeau = 0;
 
    //Creer/supprime une nouvelle class lors du clic
    function ouvrirImg(i){
       image[i].onclick = function() {
-         if (drapeau == 0) {
-            image[i].classList.add('open');
-            drapeau = 1;
-         } else {
-            image[i].classList.remove('open');
-            drapeau = 0;
-         }
+         image[i].classList.toggle('open');
       };
-
    };
 
    //appel la fonction pour chaque image
