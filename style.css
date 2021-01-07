@@ -329,7 +329,31 @@ h1 {
    z-index: 2;
 }
 
+.next, .prev{
+   display: none;
+}
+.next.open, .prev.open{
+   display:block;
+   position: fixed;
+   top:50%;
+   transform: translateY(-50%);
+   background-size:100%;
+   background-repeat: no-repeat;
+   z-index: 3;
+}
+.next.open{
+   right:5%;
+   background-image: url(assets/img/next.png);
+}
+.prev.open{
+   left:5%;
+   background-image: url(assets/img/prev.png);
+}
 
+.next.open:hover, .prev.open:hover{
+   background-size:95%;
+   cursor: pointer;
+}
 /*PARTIE EQUIPEMENT*/
 #equipementsID {
    color: rgb(13, 22, 55);

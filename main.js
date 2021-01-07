@@ -62,15 +62,55 @@ parallaxInversee('.agencement', '.articleAgencement', '.imagesAgencement', 90, 5
 //OUVERTURE PHOTOS
 function ouvrirImage(conteneur){
    let image = document.querySelector(conteneur).children;
+   let conteneurImg = document.querySelector(conteneur);
+   let firstDiv = document.createElement("div");
+   let lastDiv = document.createElement("div");
 
-   //Creer/supprime une nouvelle class lors du clic
+   conteneurImg.insertAdjacentElement('afterbegin', firstDiv);
+   conteneurImg.firstChild.classList.add('prev');
+   let prev = document.querySelector('.prev');
+   conteneurImg.insertAdjacentElement('beforeend', lastDiv);
+   conteneurImg.lastChild.classList.add('next');
+   let next = document.querySelector('.next');
+
+
+   //Creer/supprime une nouvelle classe lors du clic
    function ouvrirImg(i){
+
+      function nextImg(){
+         if(i==image.length-2) {//si on est sur la derniere image
+            i=1;//on retourne à la première
+            image[image.length-2].classList.toggle('open');//on cache la derniere image
+         }
+         else
+         {
+            i++;
+            image[i-1].classList.toggle('open');
+         }
+         image[i].classList.toggle('open');//on affiche la nouevlle image
+      }
+      function prevImg(){
+         if(i==1){//si on est sur la premiere
+            i=image.length-2;// on va sur la derniere
+            image[1].classList.toggle('open');// on cache la nouvelle image
+         }
+         else {
+            i--;
+            image[i+1].classList.toggle('open');
+         }
+         image[i].classList.toggle('open');// on affiche la nouvelle image
+      }
+
       image[i].onclick = function() {
          image[i].classList.toggle('open');
+         prev.classList.toggle('open');
+         next.classList.toggle('open');
+         next.onclick = nextImg;
+         prev.onclick = prevImg;
       };
    };
 
-   //appel la fonction pour chaque image
+   //appel la fonction pour chaque image et les boutons
    for (var i = 0; i < image.length; i++) {
       ouvrirImg(i);
    }
