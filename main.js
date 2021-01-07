@@ -37,7 +37,7 @@ function parallaxDescription(a, b, c) {
 }
 
 //parallaxDescription(conteneur, item, vitesseItem)
-parallaxDescription('.description', '.articleDescription', 19.8);
+parallaxDescription('.description', '.articleDescription', 18.5);
 
 //PARALLAX INVERSEE AGENCEMENT
 function parallaxInversee(c, a, b, i, k) {
@@ -75,21 +75,10 @@ function ouvrirImage(conteneur){
 
 
    //Creer/supprime une nouvelle classe lors du clic
+   //Caroussel permettant de switcher entre les images
    function ouvrirImg(i){
 
       function nextImg(){
-         if(i==image.length-2) {//si on est sur la derniere image
-            i=1;//on retourne à la première
-            image[image.length-2].classList.toggle('open');//on cache la derniere image
-         }
-         else
-         {
-            i++;
-            image[i-1].classList.toggle('open');
-         }
-         image[i].classList.toggle('open');//on affiche la nouevlle image
-      }
-      function prevImg(){
          if(i==1){//si on est sur la premiere
             i=image.length-2;// on va sur la derniere
             image[1].classList.toggle('open');// on cache la nouvelle image
@@ -99,6 +88,18 @@ function ouvrirImage(conteneur){
             image[i+1].classList.toggle('open');
          }
          image[i].classList.toggle('open');// on affiche la nouvelle image
+      }
+      function prevImg(){
+         if(i==image.length-2) {//si on est sur la derniere image
+            i=1;//on retourne à la première
+            image[image.length-2].classList.toggle('open');//on cache la derniere image
+         }
+         else
+         {
+            i++;
+            image[i-1].classList.toggle('open');
+         }
+         image[i].classList.toggle('open');//on affiche la nouvelle image
       }
 
       image[i].onclick = function() {
@@ -118,3 +119,4 @@ function ouvrirImage(conteneur){
 
 //ouvrirImage(conteneur)
 ouvrirImage('.imagesAgencement');
+ouvrirImage('.carrousel')

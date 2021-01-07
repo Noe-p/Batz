@@ -239,14 +239,15 @@ h1 {
 
 .articleDescription {
    position: relative;
-   margin-top:0;
+   margin-top: 0;
+   top:20px;
    right: 6%;
-   text-align: left;
+   text-align:center;
    width: 30%;
    height: 5%;
-   padding: 10px;
-   border: solid 1px rgb(13, 22, 55);
    border-radius: 7px;
+   padding: 10px;
+   background-color: rgba(246, 239, 221, 0.5);
    z-index: 2;
 }
 
@@ -261,7 +262,7 @@ h1 {
 
 .photosDescription img {
    margin-bottom: 50px;
-   width: 45vw;
+   width: 60vw;
    border-radius: 2px;
 }
 
@@ -284,7 +285,6 @@ h1 {
    border: solid 1px rgb(246, 239, 221);
    border-radius: 7px;
    z-index: 2;
-   transition: all 0.2s;
 }
 
 .imagesAgencement {
@@ -325,7 +325,7 @@ h1 {
    border: none;
    border-radius: 0;
    width: 40%;
-   background-color: rgba(55, 55, 55, 0.5);
+   background-color: rgba(246, 239, 221, 0.3);
    z-index: 2;
 }
 
@@ -400,6 +400,7 @@ h1 {
    border: solid 2px rgb(13, 22, 55);
    border-radius: 7px;
 }
+
 
 #photos #imageVueCambreRouge {
    width: 20vw;
