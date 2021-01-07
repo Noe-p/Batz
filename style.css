@@ -4,18 +4,13 @@
 }
 
 @font-face {
-   font-family: 'Raleway-Medium';
-   src: url("assets/fonts/raleway/Raleway-Medium.ttf");
-}
-
-@font-face {
-   font-family: 'Raleway-Regular';
-   src: url("assets/fonts/raleway/Raleway-Regular.ttf");
-}
-
-@font-face {
    font-family: 'Lobster';
    src: url("assets/fonts/lobster/Lobster.otf");
+}
+
+@font-face {
+   font-family: 'Sanchez';
+   src: url("assets/fonts/Sanchez/Sanchez-Regular.ttf");
 }
 
 html {
@@ -25,15 +20,14 @@ html {
 
 body {
    margin: 0;
-   font-family: "Raleway-Regular";
+   font-family: "Sanchez";
    background-color: rgb(246, 239, 221);
    color: rgb(13, 22, 55);
 }
 
 h2 {
-   font-size: 2vw;
+   font-size: 2em;
    text-align: center;
-   font-family: "Raleway-Medium";
 }
 
 h3, p {
@@ -72,19 +66,19 @@ p .lienLeboncoin:hover, footer li a:hover, aside a:hover, .navigation.position.c
 #enTete {
    position: absolute;
    top: 0;
-   left:0;
+   left: 0;
    background-color: rgba(0, 0, 0, 0.3);
    display: flex;
    align-items: center;
    justify-content: center;
    width: 100%;
-   height:100%;
+   height: 100%;
    z-index: 1;
 }
 
-video{
-   width:100%;
-   height:100vh;
+video {
+   width: 100%;
+   height: 100vh;
    object-fit: cover;
 }
 
@@ -155,7 +149,7 @@ h1 {
 
 .menuGauche a:hover, .menuDroit a:hover {
    background-color: rgba(13, 22, 55, 0.4);
-   border: solid 1px rgb(13, 22, 55);
+   border: solid 1px rgb(3, 7, 22);
    padding-left: 0px;
    padding-right: 0px;
    margin-left: 30px;
@@ -193,7 +187,7 @@ h1 {
    text-align: center;
    width: 7%;
    border-radius: 10px;
-   border: solid 1px rgb(13, 22, 55);
+   border: solid 1px rgb(3, 7, 22);
    background-color: rgba(246, 239, 221, 0.5);
    color: (246, 239, 221);
    position: absolute;
@@ -202,6 +196,7 @@ h1 {
    transition-property: color, border, background-color;
    transition-duration: 0.5s;
    transition-timing-function: ease-in-out;
+   z-index: 5;
 }
 
 .navigation.position {
@@ -224,14 +219,14 @@ h1 {
 }
 
 .navigation p, .navigation a {
-   color: rgb(13, 22, 55);
+   color: rgb(3, 7, 22);
    font-size: 0.9vw;
    transition: all 0.5s ease-in-out;
 }
 
 /*PARTIE DESCRIPTION*/
 .description {
-   color: rgb(13, 22, 55);
+   color: rgb(3, 7, 22);
    display: flex;
    justify-content: space-between;
    padding-top: 2%;
@@ -240,9 +235,9 @@ h1 {
 .articleDescription {
    position: relative;
    margin-top: 0;
-   top:20px;
+   top: 7vw;
    right: 6%;
-   text-align:center;
+   text-align: center;
    width: 30%;
    height: 5%;
    border-radius: 7px;
@@ -253,7 +248,7 @@ h1 {
 
 .photosDescription {
    position: relative;
-   margin-top:0%;
+   margin-top: 0%;
    width: auto;
    left: 10%;
    display: flex;
@@ -261,6 +256,7 @@ h1 {
 }
 
 .photosDescription img {
+   border: solid 1px rgb(3, 7, 22);
    margin-bottom: 50px;
    width: 60vw;
    border-radius: 2px;
@@ -274,6 +270,7 @@ h1 {
    display: flex;
    flex-direction: column;
    align-items: center;
+   padding-bottom: 7vw;
 }
 
 .articleAgencement {
@@ -289,7 +286,6 @@ h1 {
 
 .imagesAgencement {
    position: relative;
-   margin-top: 1%;
    display: flex;
    align-items: center;
    justify-content: space-between;
@@ -299,133 +295,105 @@ h1 {
 .imagesAgencement img {
    position: relative;
    width: 30%;
-   top:10px;
+   top: 50px;
    border: solid 1px rgb(246, 239, 221);
    border-radius: 7px;
-   padding: 1%;
    transition-property: top, background-color;
    transition-duration: 0.5s;
 }
 
-.imagesAgencement img:hover{
+.imagesAgencement img:hover {
    cursor: pointer;
    border-color: rgb(235, 165, 0);
-   margin-top:0;
-   top:0px;
+   margin-top: 0;
+   top: 30px;
 }
 
-
-.imagesAgencement img.open{
+.imagesAgencement img.open {
    position: fixed;
-   top:50%;
+   top: 50%;
    left: 50%;
-   transform: translate(-50%,-50%);
+   transform: translate(-50%, -50%);
    padding: 100%;
-   width: 40%
-   border: none;
+   width: 40% border: none;
    border-radius: 0;
    width: 40%;
-   background-color: rgba(246, 239, 221, 0.3);
+   background-color: rgba(3, 7, 22, 0.6);
    z-index: 2;
 }
 
-.next, .prev{
+.next, .prev {
    display: none;
 }
-.next.open, .prev.open{
-   display:block;
+
+.next.open, .prev.open {
+   display: block;
    position: fixed;
-   top:50%;
+   top: 50%;
    transform: translateY(-50%);
-   background-size:100%;
+   background-size: 100%;
    background-repeat: no-repeat;
    z-index: 3;
 }
-.next.open{
-   right:5%;
+
+.next.open {
+   right: 5%;
    background-image: url(assets/img/next.png);
 }
-.prev.open{
-   left:5%;
+
+.prev.open {
+   left: 5%;
    background-image: url(assets/img/prev.png);
 }
 
-.next.open:hover, .prev.open:hover{
-   background-size:95%;
+.next.open:hover, .prev.open:hover {
+   background-size: 95%;
    cursor: pointer;
 }
+
 /*PARTIE EQUIPEMENT*/
 #equipementsID {
    color: rgb(13, 22, 55);
+   display: flex;
    align-items: center;
-   text-align: center;
-   padding: 10px;
+   justify-content: center;
 }
 
 #listeEquipementsGauche, #listeEquipementsDroite {
    display: inline-block;
    vertical-align: middle;
-   text-align: center;
-   margin-right: 80px;
-   margin-left: 80px;
-   padding: 10px;
+   text-align: left;
+   margin-right: 5vw;
+   margin-left: 5vw;
 }
 
-#listeEquipementsDroite li, #listeEquipementsGauche li {
-   font-size: 100%;
-   list-style-type: none;
+#listeEquipementsGauche li, #listeEquipementsDroite li {
    background-image: url('assets/img/verifier.png');
    background-repeat: no-repeat;
-   background-position: 0 0.32em;
-   padding-left: 15px;
+   background-position: 0em -0.3em;
+   padding-left: 3em;
 }
 
 /*PHOTOS*/
-#photos {
+.photos {
+   background-color: rgb(13, 22, 55);
    margin-top: 30px;
    margin-bottom: 30px;
-   position: relative;
-   display: flex;
-   justify-content: space-around;
-   align-items: center;
-   transition-property: all;
-   transition-duration: 0.4s;
-   transition-timing-function: ease-in-out;
 }
 
-.carrousel img {
-   width: 20vw;
-   padding: 10px;
-   margin: 10px;
-   border: solid 2px rgb(13, 22, 55);
+.photos img {
+   width: 30vw;
+   margin:1px;
+   border: solid 1px rgb(3, 7, 22);
    border-radius: 7px;
 }
 
-
 #photos #imageVueCambreRouge {
-   width: 20vw;
-   margin-left: 240px;
-   margin-right: 240px;
+   width: 30vw;
 }
 
 #photos #ChambreMilieu {
-   width: 453.6px;
-   height: 605px;
-   margin-left: 183.2px;
-   margin-right: 183.2px;
-}
-
-.prev:hover, .next:hover {
-   width: 75px;
-   height: 75px;
-   padding: 7.5px;
-}
-
-.prev, .next {
-   padding: 10px;
-   width: 70px;
-   height: 70px;
-   transition: all 0.1s ease-in-out;
+   width: 30vw;
 }
 
 /*CARTE*/
