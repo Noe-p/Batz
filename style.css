@@ -303,9 +303,9 @@ h1 {
    border: solid 1px rgb(246, 239, 221);
    border-radius: 7px;
    padding: 1%;
-   transition: top 0.5s;
+   transition-property: top, background-color;
+   transition-duration: 0.5s;
 }
-
 
 .imagesAgencement img:hover{
    cursor: pointer;
@@ -314,30 +314,21 @@ h1 {
    top:0px;
 }
 
+
 .imagesAgencement img.open{
    position: fixed;
-   top: 0;
-   left: 0;
-   background-color: rgba(60, 60, 60, 0.5);
-   padding-left:30%;
-   padding-right:30%;
-   padding-top:4%;
-   padding-bottom:4%;
+   top:50%;
+   left: 50%;
+   transform: translate(-50%,-50%);
+   padding: 100%;
+   width: 40%
    border: none;
    border-radius: 0;
    width: 40%;
+   background-color: rgba(55, 55, 55, 0.5);
    z-index: 2;
-   animation-name: openImg;
-   animation-duration: 0.5s;
-   animation-timing-function: ease-in-out;
 }
 
-@keyframes openImg {
-   from{
-      transform: rotateX(90deg);
-      background-color: rgba(0, 0, 0, 1);
-   }
-}
 
 /*PARTIE EQUIPEMENT*/
 #equipementsID {

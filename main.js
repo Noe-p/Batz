@@ -64,12 +64,11 @@ function ouvrirImage(conteneur){
    let image = document.querySelector(conteneur).children;
    let drapeau = 0;
 
-   //Ouvre/ferme l'image au clic
+   //Creer/supprime une nouvelle class lors du clic
    function ouvrirImg(i){
       image[i].onclick = function() {
          if (drapeau == 0) {
             image[i].classList.add('open');
-            let open = document.querySelector('.open');
             drapeau = 1;
          } else {
             image[i].classList.remove('open');
@@ -84,5 +83,6 @@ function ouvrirImage(conteneur){
       ouvrirImg(i);
    }
 }
+
 //ouvrirImage(conteneur)
 ouvrirImage('.imagesAgencement');
