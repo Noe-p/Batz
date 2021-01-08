@@ -196,7 +196,7 @@ h1 {
    transition-property: color, border, background-color;
    transition-duration: 0.5s;
    transition-timing-function: ease-in-out;
-   z-index: 5;
+   z-index: 3;
 }
 
 .navigation.position {
@@ -315,15 +315,15 @@ h1 {
    left: 50%;
    transform: translate(-50%, -50%);
    padding: 100%;
-   width: 40% border: none;
+   border: none;
    border-radius: 0;
    width: 40%;
    background-color: rgba(3, 7, 22, 0.6);
-   z-index: 2;
+   z-index: 4;
 }
 
 .next, .prev {
-   display: none;
+   display:none;
 }
 
 .next.open, .prev.open {
@@ -332,8 +332,12 @@ h1 {
    top: 50%;
    transform: translateY(-50%);
    background-size: 100%;
+   width: 70px;
+   height: 70px;
    background-repeat: no-repeat;
-   z-index: 3;
+   z-index: 5;
+   transition: all 0.3s;
+   cursor: auto;
 }
 
 .next.open {
@@ -387,12 +391,21 @@ h1 {
 .mosaic {
    display: grid;
    grid-template-columns: repeat(4, 1fr);
-   grid-gap:0.5vw;
-
+   grid-gap: 70px;
 }
-.mosaic img:nth-child(10) {
-   height:36vw;
-   grid-column: 3 ;
+.mosaic.animation{
+   animation-name: mosaic;
+   animation-duration: 3s;
+   animation-timing-function: ease-in-out;
+   grid-gap: 0.5vw;
+}
+@keyframes mosaic {
+   from {grid-gap: 70px;}
+   top {grid-gap: 0.5vw;}
+}
+.mosaic img:nth-child(8) {
+   height: 36vw;
+   grid-column: 3;
    grid-row: 2 / 4;
 }
 
@@ -401,13 +414,14 @@ h1 {
    grid-column: 1 / 3;
    grid-row: 1 / 3;
 }
-.mosaic img:nth-child(8) {
+
+.mosaic img:nth-child(10) {
    width: 47.7vw;
    grid-column: 1 / 3;
    grid-row: 4 / 4;
 }
 
-.mosaic img:nth-child(9) {
+.mosaic img:nth-child(11) {
    width: 47.7vw;
    grid-column: 3/5;
    grid-row: 4 / 5;
@@ -419,18 +433,36 @@ h1 {
    border-radius: 7px;
 }
 
-.photos img{
+.photos img {
    position: relative;
-   top:0;
+   top: 0;
    transition: top 0.5s;
 }
 
-.photos img:hover{
+.photos img:hover {
    position: relative;
    cursor: pointer;
    border-color: rgb(235, 165, 0);
    margin-top: 0;
    top: -10px;
+}
+
+.mosaic img.open {
+   position: fixed;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   padding: 100%;
+   border: none;
+   border-radius: 0;
+   width: 60vw;
+   background-color: rgba(3, 7, 22, 0.6);
+   z-index: 4;
+   cursor: auto;
+}
+.mosaic img:nth-child(8).open {
+   width: 25vw;
+   height: 95vh;
 }
 
 /*CARTE*/

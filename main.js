@@ -1,5 +1,3 @@
-
-
 //ANIMATION DE LA DIV NAVIGATION
 let description = document.querySelector('.description');
 let nav = document.querySelector('.navigation');
@@ -12,8 +10,8 @@ window.addEventListener('scroll', () => {
       nav.classList.remove('position');
    }
 
-   if ((window.scrollY > agencement.offsetTop - nav.offsetHeight)
-   && (window.scrollY < agencement.offsetTop + agencement.offsetHeight - nav.offsetHeight)) {
+   if ((window.scrollY > agencement.offsetTop - nav.offsetHeight) &&
+      (window.scrollY < agencement.offsetTop + agencement.offsetHeight - nav.offsetHeight)) {
       nav.classList.add('couleur');
    } else {
       nav.classList.remove('couleur');
@@ -58,7 +56,7 @@ function parallaxInversee(c, a, b, i, k) {
 parallaxInversee('.agencement', '.articleAgencement', '.imagesAgencement', 90, 80);
 
 //OUVERTURE PHOTOS
-function ouvrirImage(conteneur){
+function ouvrirImage(conteneur) {
    let image = document.querySelector(conteneur).children;
    let conteneurImg = document.querySelector(conteneur);
    let firstDiv = document.createElement("div");
@@ -74,30 +72,28 @@ function ouvrirImage(conteneur){
 
    //Creer/supprime une nouvelle classe lors du clic
    //Caroussel permettant de switcher entre les images
-   function ouvrirImg(i){
+   function ouvrirImg(i) {
 
-      function nextImg(){
-         if(i==1){//si on est sur la premiere
-            i=image.length-2;// on va sur la derniere
-            image[1].classList.toggle('open');// on cache la nouvelle image
-         }
-         else {
+      function nextImg() {
+         if (i == 1) { //si on est sur la premiere
+            i = image.length - 2; // on va sur la derniere
+            image[1].classList.toggle('open'); // on cache la nouvelle image
+         } else {
             i--;
-            image[i+1].classList.toggle('open');
+            image[i + 1].classList.toggle('open');
          }
-         image[i].classList.toggle('open');// on affiche la nouvelle image
+         image[i].classList.toggle('open'); // on affiche la nouvelle image
       }
-      function prevImg(){
-         if(i==image.length-2) {//si on est sur la derniere image
-            i=1;//on retourne à la première
-            image[image.length-2].classList.toggle('open');//on cache la derniere image
-         }
-         else
-         {
+
+      function prevImg() {
+         if (i == image.length - 2) { //si on est sur la derniere image
+            i = 1; //on retourne à la première
+            image[image.length - 2].classList.toggle('open'); //on cache la derniere image
+         } else {
             i++;
-            image[i-1].classList.toggle('open');
+            image[i - 1].classList.toggle('open');
          }
-         image[i].classList.toggle('open');//on affiche la nouvelle image
+         image[i].classList.toggle('open'); //on affiche la nouvelle image
       }
 
       image[i].onclick = function() {
@@ -117,3 +113,14 @@ function ouvrirImage(conteneur){
 
 //ouvrirImage(conteneur)
 ouvrirImage('.imagesAgencement');
+ouvrirImage('.mosaic');
+
+//ANIMATION PHOTOS
+let photos = document.querySelector('.photos');
+let mosaic = document.querySelector('.mosaic');
+
+window.addEventListener('scroll', () => {
+   if (window.scrollY > photos.offsetTop-(screen.height/1.2)) {
+      mosaic.classList.add('animation');
+   }
+});
