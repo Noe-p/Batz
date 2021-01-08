@@ -353,6 +353,7 @@ h1 {
 
 /*PARTIE EQUIPEMENT*/
 #equipementsID {
+   margin-top: 30px;
    color: rgb(13, 22, 55);
    display: flex;
    align-items: center;
@@ -376,28 +377,65 @@ h1 {
 
 /*PHOTOS*/
 .photos {
-   background-color: rgb(13, 22, 55);
-   margin-top: 30px;
-   margin-bottom: 30px;
+   margin-top: 50px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   width: 100%;
 }
 
-.photos img {
-   width: 30vw;
-   margin:1px;
+.mosaic {
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
+   grid-gap:0.5vw;
+
+}
+.mosaic img:nth-child(10) {
+   height:36vw;
+   grid-column: 3 ;
+   grid-row: 2 / 4;
+}
+
+.mosaic img:nth-child(6) {
+   width: 47.7vw;
+   grid-column: 1 / 3;
+   grid-row: 1 / 3;
+}
+.mosaic img:nth-child(8) {
+   width: 47.7vw;
+   grid-column: 1 / 3;
+   grid-row: 4 / 4;
+}
+
+.mosaic img:nth-child(9) {
+   width: 47.7vw;
+   grid-column: 3/5;
+   grid-row: 4 / 5;
+}
+
+.mosaic img {
+   width: 23.5vw;
    border: solid 1px rgb(3, 7, 22);
    border-radius: 7px;
 }
 
-#photos #imageVueCambreRouge {
-   width: 30vw;
+.photos img{
+   position: relative;
+   top:0;
+   transition: top 0.5s;
 }
 
-#photos #ChambreMilieu {
-   width: 30vw;
+.photos img:hover{
+   position: relative;
+   cursor: pointer;
+   border-color: rgb(235, 165, 0);
+   margin-top: 0;
+   top: -10px;
 }
 
 /*CARTE*/
 .carte {
+   margin-top: 30px;
    background-color: rgb(13, 22, 55);
    color: rgb(246, 239, 221);
    text-align: center;

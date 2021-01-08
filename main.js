@@ -117,4 +117,3 @@ function ouvrirImage(conteneur){
 
 //ouvrirImage(conteneur)
 ouvrirImage('.imagesAgencement');
-ouvrirImage('.carrousel')
