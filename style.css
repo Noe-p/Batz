@@ -23,6 +23,7 @@ body {
    font-family: "Sanchez";
    background-color: rgb(246, 239, 221);
    color: rgb(13, 22, 55);
+   overflow-x: hidden;
 }
 
 h2 {
@@ -92,6 +93,9 @@ h1 {
    transform: translate(-50%, -50%);
    animation-duration: 3s;
    animation-name: titre;
+   opacity: 0;
+   animation-fill-mode:forwards;
+   animation-delay: 2s;
 }
 
 @keyframes titre {
@@ -127,9 +131,12 @@ h1 {
    position: absolute;
    top: 50%;
    transform: translate(-50%, -50%);
+   opacity: 0;
    animation-duration: 5.5s;
    animation-name: menu;
    animation-timing-function: ease-in-out;
+   animation-fill-mode:forwards;
+   animation-delay: 3s;
 }
 
 .menuDroit {
@@ -144,6 +151,9 @@ h1 {
    from {
       top: 47%;
       opacity: 0;
+   }
+   to{
+      opacity: 1;
    }
 }
 
@@ -382,6 +392,7 @@ h1 {
 /*PHOTOS*/
 .photos {
    margin-top: 50px;
+   margin-bottom: 30px;
    display: flex;
    align-items: center;
    justify-content: center;
@@ -467,7 +478,6 @@ h1 {
 
 /*CARTE*/
 .carte {
-   margin-top: 30px;
    background-color: rgb(13, 22, 55);
    color: rgb(246, 239, 221);
    text-align: center;
@@ -479,16 +489,40 @@ h1 {
    font-size: 1.2em;
 }
 
-#carte h2 {
+.articleCarte h2 {
    font-family: 'GreatVibes-Regular';
    font-size: 2.5vw;
 }
 
-#carte img {
-   width: 1105px;
-   height: 601px;
+.articleCarte img {
+   width: 88vw;
 }
 
+.bateau{
+   position: relative;
+   top:-17vw;
+   left: 8vw;
+   width: 5vw;
+   transform: rotate(90deg);
+}
+
+.bateau.animation {
+   animation-name: bateau;
+   animation-duration: 7s;
+   animation-timing-function:ease-out;
+}
+
+@keyframes bateau {
+   0%{
+      top: 0;
+      left:50vw;
+      transform: rotate(0deg);
+   }
+   70%{
+      top:-13vw;
+      transform: rotate(30deg);
+   }
+}
 /*PARTIE TARIF INFORMATION*/
 #tarifsInformations {
    display: flex;
@@ -504,6 +538,14 @@ h1 {
    border-bottom: solid 3px rgb(13, 22, 55);
 }
 
+.tarifs.animation, .informations.animation{
+   animation-name: slideText;
+   animation-duration: 3s;
+}
+
+@keyframes slideText {
+   from {transform: translateX(-200%);}
+}
 /*FOOTER*/
 footer {
    display: flex;
@@ -551,36 +593,6 @@ footer a, aside a {
 }
 
 /*RESPONSIVE DESIGN*/
-@media screen and (max-width:1255px) {
-   #carte img {
-      width: 773.5px;
-      height: 420.7px;
-   }
-}
-
-@media screen and (max-width:1140px) {
-   #photos #imageVueCambreRouge {
-      width: 212.5px;
-      height: 378px;
-      margin-left: 155px;
-      margin-right: 155px;
-   }
-
-   #photos #ChambreMilieu {
-      width: 283.5px;
-      height: 378px;
-      margin-left: 117px;
-      margin-right: 117px;
-   }
-}
-
-@media screen and (max-width:1010px) {
-   #carte img {
-      width: 541.45px;
-      height: 294.49px;
-   }
-}
-
 @media screen and (max-width:885px) {
    .navigation {
       display: none;
@@ -588,31 +600,12 @@ footer a, aside a {
 }
 
 @media screen and (max-width:830px) {
-   #carte img {
-      width: 379px;
-      height: 205.8px;
-   }
 
    .bouton {
       margin-left: 65%;
    }
 }
 
-@media screen and (max-width:685px) {
-   #photos #imageVueCambreRouge {
-      width: 170px;
-      height: 302.2px;
-      margin-left: 120px;
-      margin-right: 120px;
-   }
-
-   #photos #ChambreMilieu {
-      width: 226.8px;
-      height: 302.5px;
-      margin-left: 91.6px;
-      margin-right: 91.6px;
-   }
-}
 
 @media screen and (max-width:630px) {
    .tarifs, .informations {

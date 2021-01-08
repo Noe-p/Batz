@@ -2,6 +2,7 @@
 let description = document.querySelector('.description');
 let nav = document.querySelector('.navigation');
 let agencement = document.querySelector('.agencement');
+let carte = document.querySelector('.carte');
 
 window.addEventListener('scroll', () => {
    if (window.scrollY > description.offsetTop) {
@@ -10,8 +11,8 @@ window.addEventListener('scroll', () => {
       nav.classList.remove('position');
    }
 
-   if ((window.scrollY > agencement.offsetTop - nav.offsetHeight) &&
-      (window.scrollY < agencement.offsetTop + agencement.offsetHeight - nav.offsetHeight)) {
+   if (((window.scrollY > agencement.offsetTop - nav.offsetHeight) && (window.scrollY < agencement.offsetTop + agencement.offsetHeight - nav.offsetHeight))
+   || (window.scrollY > carte.offsetTop - nav.offsetHeight)) {
       nav.classList.add('couleur');
    } else {
       nav.classList.remove('couleur');
@@ -33,7 +34,7 @@ function parallaxDescription(a, b, c) {
 }
 
 //parallaxDescription(conteneur, item, vitesseItem)
-parallaxDescription('.description', '.articleDescription', 20.1);
+parallaxDescription('.description', '.articleDescription', 18.5);
 
 //PARALLAX INVERSEE AGENCEMENT
 function parallaxInversee(c, a, b, i, k) {
@@ -115,12 +116,21 @@ function ouvrirImage(conteneur) {
 ouvrirImage('.imagesAgencement');
 ouvrirImage('.mosaic');
 
-//ANIMATION PHOTOS
-let photos = document.querySelector('.photos');
-let mosaic = document.querySelector('.mosaic');
+//ANIMATION
 
-window.addEventListener('scroll', () => {
-   if (window.scrollY > photos.offsetTop-(screen.height/1.2)) {
-      mosaic.classList.add('animation');
-   }
-});
+//creer une classe lors du scroll
+function animation(element){
+   let item = document.querySelector(element);
+   window.addEventListener('scroll', () => {
+      if (window.scrollY > item.offsetTop-(screen.height/1.2)) {
+         item.classList.add('animation');
+      }
+   });
+}
+
+animation('menuDroit');
+animation('menuGauche');
+animation('.mosaic');
+animation('.bateau');
+animation('.tarifs');
+animation('.informations');
