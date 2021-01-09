@@ -27,12 +27,12 @@ body {
 }
 
 h2 {
-   font-size: 2em;
+   font-size: 2vw;
    text-align: center;
 }
 
 h3, p {
-   font-size: 1em;
+   font-size: 1vw;
 }
 
 ul {
@@ -94,8 +94,9 @@ h1 {
    animation-duration: 3s;
    animation-name: titre;
    opacity: 0;
-   animation-fill-mode:forwards;
+   animation-fill-mode: forwards;
    animation-delay: 2s;
+   text-align: center;
 }
 
 @keyframes titre {
@@ -135,7 +136,7 @@ h1 {
    animation-duration: 5.5s;
    animation-name: menu;
    animation-timing-function: ease-in-out;
-   animation-fill-mode:forwards;
+   animation-fill-mode: forwards;
    animation-delay: 3s;
 }
 
@@ -152,7 +153,8 @@ h1 {
       top: 47%;
       opacity: 0;
    }
-   to{
+
+   to {
       opacity: 1;
    }
 }
@@ -280,7 +282,7 @@ h1 {
    display: flex;
    flex-direction: column;
    align-items: center;
-   padding-bottom: 7vw;
+   padding-bottom: 8vw;
 }
 
 .articleAgencement {
@@ -305,7 +307,7 @@ h1 {
 .imagesAgencement img {
    position: relative;
    width: 30%;
-   top: 50px;
+   top: 4vw;
    border: solid 1px rgb(246, 239, 221);
    border-radius: 7px;
    transition-property: top, background-color;
@@ -330,10 +332,12 @@ h1 {
    width: 40%;
    background-color: rgba(3, 7, 22, 0.6);
    z-index: 4;
+   cursor: auto;
+
 }
 
 .next, .prev {
-   display:none;
+   display: none;
 }
 
 .next.open, .prev.open {
@@ -342,8 +346,8 @@ h1 {
    top: 50%;
    transform: translateY(-50%);
    background-size: 100%;
-   width: 70px;
-   height: 70px;
+   width: 5vw;
+   height: 5vw;
    background-repeat: no-repeat;
    z-index: 5;
    transition: all 0.3s;
@@ -404,16 +408,24 @@ h1 {
    grid-template-columns: repeat(4, 1fr);
    grid-gap: 70px;
 }
-.mosaic.animation{
+
+.mosaic.animation {
    animation-name: mosaic;
    animation-duration: 3s;
    animation-timing-function: ease-in-out;
    grid-gap: 0.5vw;
 }
+
 @keyframes mosaic {
-   from {grid-gap: 70px;}
-   top {grid-gap: 0.5vw;}
+   from {
+      grid-gap: 70px;
+   }
+
+   top {
+      grid-gap: 0.5vw;
+   }
 }
+
 .mosaic img:nth-child(8) {
    height: 36vw;
    grid-column: 3;
@@ -471,9 +483,10 @@ h1 {
    z-index: 4;
    cursor: auto;
 }
+
 .mosaic img:nth-child(8).open {
    width: 25vw;
-   height: 95vh;
+   height: 43vw;
 }
 
 /*CARTE*/
@@ -498,9 +511,9 @@ h1 {
    width: 88vw;
 }
 
-.bateau{
+.bateau {
    position: relative;
-   top:-17vw;
+   top: -17.5vw;
    left: 8vw;
    width: 5vw;
    transform: rotate(90deg);
@@ -509,20 +522,23 @@ h1 {
 .bateau.animation {
    animation-name: bateau;
    animation-duration: 7s;
-   animation-timing-function:ease-out;
+   animation-timing-function: ease-out;
 }
 
 @keyframes bateau {
-   0%{
+   0% {
       top: 0;
-      left:50vw;
+      left: 50vw;
       transform: rotate(0deg);
    }
-   70%{
-      top:-13vw;
+
+   70% {
+      top: -13vw;
       transform: rotate(30deg);
+      left: 8vw;
    }
 }
+
 /*PARTIE TARIF INFORMATION*/
 #tarifsInformations {
    display: flex;
@@ -532,20 +548,24 @@ h1 {
 }
 
 .tarifs, .informations {
-   width: 580px;
-   height: 230px;
-   margin: 20px;
-   border-bottom: solid 3px rgb(13, 22, 55);
+	width: 42vw;
+	height: 14vw;
+	margin: 20px;
+	border-bottom: solid 3px rgb(13, 22, 55);
 }
 
-.tarifs.animation, .informations.animation{
+
+.tarifs.animation, .informations.animation {
    animation-name: slideText;
    animation-duration: 3s;
 }
 
 @keyframes slideText {
-   from {transform: translateX(-200%);}
+   from {
+      transform: translateX(-200%);
+   }
 }
+
 /*FOOTER*/
 footer {
    display: flex;
@@ -593,6 +613,7 @@ footer a, aside a {
 }
 
 /*RESPONSIVE DESIGN*/
+
 @media screen and (max-width:885px) {
    .navigation {
       display: none;
@@ -600,17 +621,36 @@ footer a, aside a {
 }
 
 @media screen and (max-width:830px) {
-
    .bouton {
       margin-left: 65%;
    }
-}
 
+   h2 {
+      font-size: 3vw;
+   }
 
-@media screen and (max-width:630px) {
+   h3, p {
+      font-size: 1.5vw;
+   }
+   ul{
+      font-size: 0.9em;
+   }
+   .menuGauche a, .menuDroit a {
+      font-size: 2.4vw;
+   }
+
+   .menuGauche a:hover, .menuDroit a:hover {
+      padding-left: 10px;
+      padding-right: 10px;
+      margin-left: 20px;
+      margin-right:20px;
+   }
+
    .tarifs, .informations {
-      width: 580px;
-      height: 250px;
-      margin: 20px;
+   	height: 22vw;
+   }
+
+   h1 {
+      font-size: 10vw;
    }
 }
