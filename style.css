@@ -309,8 +309,7 @@ h1 {
    top: 4vw;
    border: solid 1px rgb(246, 239, 221);
    border-radius: 7px;
-   transition-property: top, background-color;
-   transition-duration: 0.5s;
+   transition: top 0.5s;
 }
 
 .imagesAgencement img:hover {
@@ -325,7 +324,7 @@ h1 {
    top: 50%;
    left: 50%;
    transform: translate(-50%, -50%);
-   padding: 100%;
+   padding: 200%;
    border: none;
    border-radius: 0;
    width: 40%;
@@ -401,6 +400,7 @@ h1 {
    justify-content: center;
    width: 100%;
    overflow: hidden;
+   padding-top: 10px;
 }
 
 .mosaic {
@@ -459,7 +459,7 @@ h1 {
 .photos img {
    position: relative;
    top: 0;
-   transition: top 0.5s;
+   transition:top 0.5s;
 }
 
 .photos img:hover {
@@ -475,7 +475,7 @@ h1 {
    top: 50%;
    left: 50%;
    transform: translate(-50%, -50%);
-   padding: 100%;
+   padding: 200%;
    border: none;
    border-radius: 0;
    width: 60vw;
@@ -556,10 +556,13 @@ h1 {
 	border-bottom: solid 3px rgb(13, 22, 55);
 }
 
-
-.tarifs.animation, .informations.animation {
+.tarifsInformations{
+   opacity: 0;
+}
+.tarifsInformations.animation{
    animation-name: slideText;
    animation-duration: 3s;
+   opacity: 1;
 }
 
 @keyframes slideText {

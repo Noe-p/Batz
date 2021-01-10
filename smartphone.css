@@ -1,9 +1,9 @@
 h2 {
-   font-size: 3.5vw;
+   font-size: 5vw;
 }
 
 h3, p {
-   font-size: 2vw;
+   font-size: 3vw;
 }
 
 ul {
@@ -15,44 +15,137 @@ h1 {
    width: 100%;
 }
 
+#enTete {
+   width: 100%;
+}
+
+video {
+   width: 100%;
+   height: 170vw;
+}
+
 .menuGauche a, .menuDroit a {
-   font-size: 4vw;
-   padding-left: 100px;
-   padding-right: 100px;
+   font-size: 5vw;
+   padding-left: 130px;
+   padding-right: 130px;
 }
 
 .navigation {
-   width: 12%;
+   width: 20%;
+   top: 112%;
 }
 
-
 .navigation h3 {
-   font-size: 1.7vw;
+   font-size: 3vw;
 }
 
 .navigation p, .navigation a {
-   font-size: 1.3vw;
+   font-size: 2.3vw;
+}
+
+.description {
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+   margin-top: 10%;
 }
 
 .articleDescription {
-   width: 60vw;
+   border: solid 1px rgb(13, 22, 55);
+   position: relative;
+   width: 65%;
+   right: 0;
+   left: 10.5%;
+}
+
+.photosDescription {
+   position: relative;
+   margin-top: 3vw;
+   width: auto;
+   left: 0;
 }
 
 .photosDescription img {
-   width: 70vw;
+   width: 95vw;
+}
+
+.next.open, .prev.open {
+   top: 80%;
+   width: 15vw;
+   height: 15vw;
+}
+
+.next.open {
+   right: 20%;
+   background-image: url(assets/img/next.png);
+}
+
+.prev.open {
+   left: 20%;
+   background-image: url(assets/img/prev.png);
+}
+
+.articleAgencement {
+   width: 90%;
+   padding-left: 5%;
+   padding-right: 5%;
+}
+
+.imagesAgencement img:hover {
+   border-color: rgb(246, 239, 221);
+   top: 0;
+}
+
+#agencementID {
+   padding-bottom: 13vw;
+}
+
+.imagesAgencement img {
+   transition: top 0.5s;
+   top: 8vw;
 }
 
 .imagesAgencement img.open {
-   width: 60%;
+   top: 40%;
+   width: 90%;
+}
+
+.photos img {
+   transition: top 1s;
+}
+
+.mosaic img.open {
+   top: 40%;
+   width: 90vw;
+}
+
+.mosaic img.open:hover {
+   top: 40%;
+   width: 90vw;
+}
+
+.photos img:hover {
+   top: 0px;
+   border-color: rgb(3, 7, 22);
+}
+
+.mosaic {
+   grid-gap: 1px;
+}
+
+.mosaic img:nth-child(8).open {
+   width: 70vw;
+   height: 120vw;
 }
 
 .articleCarte h2 {
-   font-size: 3.5vw;
+   font-size: 5vw;
 }
 
 .bateau {
-   top: -22vw;
+   top: -25vw;
 }
+
 @keyframes bateau {
    0% {
       top: 0;
@@ -61,13 +154,15 @@ h1 {
    }
 
    70% {
-      top: -17vw;
+      top: -20vw;
       transform: rotate(30deg);
       left: 8vw;
    }
 }
+
 .tarifs, .informations {
-	height: 38vw;
+   width: 80vw;
+   height: 50vw;
 }
 
 footer {

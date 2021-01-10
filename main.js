@@ -11,8 +11,8 @@ window.addEventListener('scroll', () => {
       nav.classList.remove('position');
    }
 
-   if (((window.scrollY > agencement.offsetTop - nav.offsetHeight) && (window.scrollY < agencement.offsetTop + agencement.offsetHeight - nav.offsetHeight-40))
-   || (window.scrollY > carte.offsetTop - nav.offsetHeight)) {
+   if (((window.scrollY > agencement.offsetTop - nav.offsetHeight) && (window.scrollY < agencement.offsetTop + agencement.offsetHeight - nav.offsetHeight - 40)) ||
+      (window.scrollY > carte.offsetTop - nav.offsetHeight)) {
       nav.classList.add('couleur');
    } else {
       nav.classList.remove('couleur');
@@ -24,20 +24,19 @@ function parallaxDescription(a, b, c) {
    window.addEventListener('scroll', () => {
       let conteneur = document.querySelector(a);
       let item = document.querySelector(b);
-      if ((window.scrollY >= conteneur.offsetTop) && (window.scrollY < conteneur.offsetTop + conteneur.offsetHeight-20)) {
+      if ((window.scrollY >= conteneur.offsetTop) && (window.scrollY < conteneur.offsetTop + conteneur.offsetHeight - 20)) {
          let j = window.scrollY - conteneur.offsetTop;
-         item.style.marginTop = (j/(conteneur.offsetHeight/c))  + '%';
-      }
-      else
-      {
+         item.style.marginTop = (j / (conteneur.offsetHeight / c)) + '%';
+      } else {
          item.style.marginTop = "0%";
       }
    });
 }
 
 //parallaxDescription(conteneur, item, vitesseItem)
-parallaxDescription('.description', '.articleDescription', 152);
-
+if (screen.availWidth > 450) {
+   parallaxDescription('.description', '.articleDescription', 152);
+}
 //PARALLAX INVERSEE AGENCEMENT
 function parallaxInversee(c, a, b, i, k) {
    let conteneur = document.querySelector(c);
@@ -48,12 +47,10 @@ function parallaxInversee(c, a, b, i, k) {
          let j = window.scrollY - conteneur.offsetTop;
          item1.style.marginTop = 1 - (j / i) + "%";
          item2.style.marginTop = 1 - (j / k) + "%";
-      }
-      else if(window.scrollY < conteneur.offsetTop) {
+      } else if (window.scrollY < conteneur.offsetTop) {
          item1.style.marginTop = "9%";
          item2.style.marginTop = "10%";
-      }
-      else{
+      } else {
          item1.style.marginTop = "0%";
          item2.style.marginTop = "-15%";
       }
@@ -126,10 +123,10 @@ ouvrirImage('.mosaic');
 //ANIMATION
 
 //creer une classe lors du scroll
-function animation(element){
+function animation(element) {
    let item = document.querySelector(element);
    window.addEventListener('scroll', () => {
-      if (window.scrollY > item.offsetTop-(screen.height/1.2)) {
+      if (window.scrollY > item.offsetTop - (screen.height / 1.2)) {
          item.classList.add('animation');
       }
    });
@@ -137,5 +134,4 @@ function animation(element){
 
 animation('.mosaic');
 animation('.bateau');
-animation('.tarifs');
-animation('.informations');
+animation('.tarifsInformations');
