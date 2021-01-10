@@ -239,19 +239,18 @@ h1 {
 /*PARTIE DESCRIPTION*/
 .description {
    color: rgb(3, 7, 22);
-   display: flex;
-   justify-content: space-between;
+   display:flex;
    padding-top: 2%;
 }
 
 .articleDescription {
-   position: relative;
+   position:absolute;
    margin-top: 0;
-   top: 7vw;
-   right: 6%;
+   top: 106%;
+   right: 2%;
    text-align: center;
-   width: 30%;
-   height: 5%;
+   width: 40vw;
+   height:auto;
    border-radius: 7px;
    padding: 10px;
    background-color: rgba(246, 239, 221, 0.5);
@@ -269,7 +268,7 @@ h1 {
 
 .photosDescription img {
    border: solid 1px rgb(3, 7, 22);
-   margin-bottom: 50px;
+   margin-bottom: 3vw;
    width: 60vw;
    border-radius: 2px;
 }
@@ -301,7 +300,7 @@ h1 {
    display: flex;
    align-items: center;
    justify-content: space-between;
-   width: 90%;
+   width: 100%;
 }
 
 .imagesAgencement img {
@@ -401,6 +400,7 @@ h1 {
    align-items: center;
    justify-content: center;
    width: 100%;
+   overflow: hidden;
 }
 
 .mosaic {
@@ -517,12 +517,14 @@ h1 {
    left: 8vw;
    width: 5vw;
    transform: rotate(90deg);
+   opacity: 0;
 }
 
 .bateau.animation {
    animation-name: bateau;
    animation-duration: 7s;
    animation-timing-function: ease-out;
+   opacity: 1;
 }
 
 @keyframes bateau {
@@ -613,7 +615,38 @@ footer a, aside a {
 }
 
 /*RESPONSIVE DESIGN*/
+@media screen and (max-width:950px){
+   h2 {
+      font-size: 2.5vw;
+   }
 
+   h3, p {
+      font-size: 1.3vw;
+   }
+
+   .articleDescription p{
+      font-size: 1vw;
+   }
+
+   .menuGauche a, .menuDroit a {
+      font-size: 2.4vw;
+   }
+
+   .menuGauche a:hover, .menuDroit a:hover {
+      padding-left: 10px;
+      padding-right: 10px;
+      margin-left: 20px;
+      margin-right:20px;
+   }
+
+   .tarifs, .informations {
+      height: 22vw;
+   }
+
+   h1 {
+      font-size: 10vw;
+   }
+}
 @media screen and (max-width:885px) {
    .navigation {
       display: none;
@@ -632,25 +665,11 @@ footer a, aside a {
    h3, p {
       font-size: 1.5vw;
    }
+   .articleDescription p{
+      font-size: 1vw;
+   }
+
    ul{
       font-size: 0.9em;
-   }
-   .menuGauche a, .menuDroit a {
-      font-size: 2.4vw;
-   }
-
-   .menuGauche a:hover, .menuDroit a:hover {
-      padding-left: 10px;
-      padding-right: 10px;
-      margin-left: 20px;
-      margin-right:20px;
-   }
-
-   .tarifs, .informations {
-   	height: 22vw;
-   }
-
-   h1 {
-      font-size: 10vw;
    }
 }

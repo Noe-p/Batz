@@ -1,179 +1,75 @@
 h2 {
-   font-size: 3em;
+   font-size: 3.5vw;
 }
 
 h3, p {
-   font-size: 2em;
+   font-size: 2vw;
 }
 
 ul {
-   font-size: 2em;
-}
-/*EN-TETE*/
-header {
-   margin-bottom: 50px;
-}
-
-#enTete {
-   flex-wrap: wrap;
-}
-
-.imageHeader {
-   margin-top: 30px;
-   width: 800px;
-   height: 490px;
-}
-
-#etoile {
-   width: 90px;
-   height: 70px;
+   font-size: 1.3em;
 }
 
 h1 {
-   font-size:7em;
-   order: 1;
-}
-
-.menuGauche {
-   order: 2;
-}
-
-.menuDroit {
-   order: 3;
+   font-size: 14vw;
+   width: 100%;
 }
 
 .menuGauche a, .menuDroit a {
-   width: 7em;
-   padding: 15px;
-   border: solid 2px rgb(13, 22, 55);
-   border-radius: 10px;
-   font-size:1.2em;
+   font-size: 4vw;
+   padding-left: 100px;
+   padding-right: 100px;
 }
 
-/*NAVIGATION*/
 .navigation {
-   position: fixed;
-   background-color:rgba(13, 22, 55, 0.5);
-   height: 170px;
-   width: 170px;
-   top:1330px;
-   left: 28px;
-   color: rgb(246, 239, 221);
-   z-index: 5;
-   border: solid 2px rgb(246, 239, 221);
-
+   width: 12%;
 }
+
+
+.navigation h3 {
+   font-size: 1.7vw;
+}
+
 .navigation p, .navigation a {
-   color: rgb(246, 239, 221);
-   font-size:25px;
-}
-.navigation h3{
-   color: rgb(246, 239, 221);
-   font-size:30px;
-}
-.navigation.position {
-   top:1330px;
-   left: 28px;
+   font-size: 1.3vw;
 }
 
-.navigation.position.couleur {
-   color: rgb(246, 239, 221);
-   background-color:rgba(13, 22, 55, 0.5);
-
+.articleDescription {
+   width: 60vw;
 }
 
-.navigation.position.couleur a {
-   color: rgb(246, 239, 221);
+.photosDescription img {
+   width: 70vw;
 }
 
-/*PARTIE DESCRIPTION*/
-
-#descriptionID img {
-   width: 800px;
-   height: 600px;
+.imagesAgencement img.open {
+   width: 60%;
 }
 
-#descriptionID article {
-   width: 800px;
+.articleCarte h2 {
+   font-size: 3.5vw;
 }
 
-/*PARTIE AGENCEMENT*/
-.ouvertureImage img {
-   width: 900px;
-   height:900px;
+.bateau {
+   top: -22vw;
 }
-.ouvertureImage {
-   width:100%;
+@keyframes bateau {
+   0% {
+      top: 0;
+      left: 50vw;
+      transform: rotate(0deg);
+   }
+
+   70% {
+      top: -17vw;
+      transform: rotate(30deg);
+      left: 8vw;
+   }
 }
-
-#articleAgencement {
-   width: 800px;
-   padding-left:auto;
-   padding-right:auto;
-}
-
-#listeEquipementsGauche, #listeEquipementsDroite {
-   display: inline-block;
-   vertical-align: middle;
-   text-align: center;
-   margin-right:0px;
-   margin-left:0px;
-   padding: 10px;
-}
-
-/*PHOTOS*/
-.carrousel img {
-   width: 750px;
-   height: 567px;
-}
-
-#photos #imageVueCambreRouge {
-   width: 318.75px;
-   height: 566.6px;
-   margin-left: 225px;
-   margin-right: 225px;
-}
-
-#photos #ChambreMilieu {
-   width: 425,25px;
-   height: 566.6px;
-   margin-left:225px;
-   margin-right: 225px;
-}
-
-/*CARTE*/
-
-#carte h2 {
-   font-size:70px;
-}
-
-#carte img {
-   width: 1000px;
-   height: 500px;
-}
-
-/*PARTIE TARIF INFORMATION*/
-
 .tarifs, .informations {
-   width: 580px;
-   height: 500px;
-   margin: 20px;
-   border-bottom: solid 2px rgb(13, 22, 55);
+	height: 38vw;
 }
 
-/*FOOTER*/
 footer {
    height: 500px;
-}
-
-.bouton {
-   padding: 5px;
-   width: 80px;
-   height: 80px;
-   margin-left: 70%;
-}
-
-.bouton img{
-   width:70px;
-   height: 70px;
 }

@@ -11,7 +11,7 @@ window.addEventListener('scroll', () => {
       nav.classList.remove('position');
    }
 
-   if (((window.scrollY > agencement.offsetTop - nav.offsetHeight) && (window.scrollY < agencement.offsetTop + agencement.offsetHeight - nav.offsetHeight))
+   if (((window.scrollY > agencement.offsetTop - nav.offsetHeight) && (window.scrollY < agencement.offsetTop + agencement.offsetHeight - nav.offsetHeight-40))
    || (window.scrollY > carte.offsetTop - nav.offsetHeight)) {
       nav.classList.add('couleur');
    } else {
@@ -21,20 +21,22 @@ window.addEventListener('scroll', () => {
 
 //PARALLAX DESCRIPTION
 function parallaxDescription(a, b, c) {
-   let conteneur = document.querySelector(a);
-   let item = document.querySelector(b);
    window.addEventListener('scroll', () => {
-      if ((window.scrollY >= conteneur.offsetTop) && (window.scrollY < conteneur.offsetTop + conteneur.offsetHeight)) {
+      let conteneur = document.querySelector(a);
+      let item = document.querySelector(b);
+      if ((window.scrollY >= conteneur.offsetTop) && (window.scrollY < conteneur.offsetTop + conteneur.offsetHeight-20)) {
          let j = window.scrollY - conteneur.offsetTop;
-         item.style.marginTop = (j / c) + '%';
-      } else {
+         item.style.marginTop = (j/(conteneur.offsetHeight/c))  + '%';
+      }
+      else
+      {
          item.style.marginTop = "0%";
       }
    });
 }
 
 //parallaxDescription(conteneur, item, vitesseItem)
-parallaxDescription('.description', '.articleDescription', 18.5);
+parallaxDescription('.description', '.articleDescription', 152);
 
 //PARALLAX INVERSEE AGENCEMENT
 function parallaxInversee(c, a, b, i, k) {
@@ -45,10 +47,12 @@ function parallaxInversee(c, a, b, i, k) {
       if ((window.scrollY >= conteneur.offsetTop - screen.availHeight) && (window.scrollY < conteneur.offsetTop + conteneur.offsetHeight)) {
          let j = window.scrollY - conteneur.offsetTop;
          item1.style.marginTop = 1 - (j / i) + "%";
+         console.log(1-(j/k));
          item2.style.marginTop = 1 - (j / k) + "%";
+         console.log(1-(j/i));
       } else {
-         item1.style.marginTop = "0%";
-         item2.style.marginTop = "-15%";
+         item1.style.marginTop = "9%";
+         item2.style.marginTop = "10%";
       }
    });
 }
@@ -128,8 +132,6 @@ function animation(element){
    });
 }
 
-animation('menuDroit');
-animation('menuGauche');
 animation('.mosaic');
 animation('.bateau');
 animation('.tarifs');
