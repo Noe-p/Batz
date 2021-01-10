@@ -47,12 +47,15 @@ function parallaxInversee(c, a, b, i, k) {
       if ((window.scrollY >= conteneur.offsetTop - screen.availHeight) && (window.scrollY < conteneur.offsetTop + conteneur.offsetHeight)) {
          let j = window.scrollY - conteneur.offsetTop;
          item1.style.marginTop = 1 - (j / i) + "%";
-         console.log(1-(j/k));
          item2.style.marginTop = 1 - (j / k) + "%";
-         console.log(1-(j/i));
-      } else {
+      }
+      else if(window.scrollY < conteneur.offsetTop) {
          item1.style.marginTop = "9%";
          item2.style.marginTop = "10%";
+      }
+      else{
+         item1.style.marginTop = "0%";
+         item2.style.marginTop = "-15%";
       }
    });
 }
