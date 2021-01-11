@@ -3,6 +3,7 @@ let description = document.querySelector('.description');
 let nav = document.querySelector('.navigation');
 let agencement = document.querySelector('.agencement');
 let carte = document.querySelector('.carte');
+let photosDescription = document.querySelector('.photosDescription');
 
 window.addEventListener('scroll', () => {
    if (window.scrollY > description.offsetTop) {
@@ -50,9 +51,6 @@ function parallaxInversee(c, a, b, i, k) {
       } else if (window.scrollY < conteneur.offsetTop) {
          item1.style.marginTop = "9%";
          item2.style.marginTop = "10%";
-      } else {
-         item1.style.marginTop = "0%";
-         item2.style.marginTop = "-15%";
       }
    });
 }
