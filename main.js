@@ -35,9 +35,10 @@ function parallaxDescription(a, b, c) {
 }
 
 //parallaxDescription(conteneur, item, vitesseItem)
-if (screen.availWidth > 450) {
-   parallaxDescription('.description', '.articleDescription', 152);
+if (smartphone() == false) {
+   parallaxDescription('.description', '.articleDescription', 203);
 }
+
 //PARALLAX INVERSEE AGENCEMENT
 function parallaxInversee(c, a, b, i, k) {
    let conteneur = document.querySelector(c);
@@ -121,15 +122,30 @@ ouvrirImage('.mosaic');
 //ANIMATION
 
 //creer une classe lors du scroll
-function animation(element) {
+function animation(element, hauteur) {
    let item = document.querySelector(element);
    window.addEventListener('scroll', () => {
-      if (window.scrollY > item.offsetTop - (screen.height / 1.2)) {
+      if (window.scrollY > item.offsetTop - (screen.height / hauteur)) {
          item.classList.add('animation');
       }
    });
 }
 
-animation('.mosaic');
-animation('.bateau');
-animation('.tarifsInformations');
+//animation(element a animer, hauteur de déclenchement)
+
+if(smartphone()==true){
+   animation('.photosDescription', 0.4);
+}
+else{
+   animation('.mosaic', 1.2);
+   animation('.tarifsInformations'  , 1.2);
+}
+
+//ANIMATION SMARTPHONE :
+function smartphone() {
+   if (navigator.userAgent.search('Mobile') == -1) {
+      return false;
+   } else {
+      return true;
+   }
+}

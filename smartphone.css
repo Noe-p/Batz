@@ -68,26 +68,44 @@ video {
    flex-direction: column;
    margin-top: 10%;
    margin-left: 6%;
+   margin-bottom: 5vw;
 }
 
 .articleDescription {
    border: solid 1px rgb(13, 22, 55);
    position: relative;
-   width: 90%;
+   width: 95%;
    right: 0;
    left:0;
 }
 
 .photosDescription {
-   position: relative;
+   display: grid;
+   grid-template-columns: repeat(1, 5fr);
+   grid-gap: 3vw;
    margin-top: 3vw;
-   width: auto;
-   left: 0;
+   left:0;
+   opacity:0
 }
 
+.photosDescription.animation{
+   animation-name: photosDescription;
+   animation-duration: 3s;
+   animation-timing-function: ease;
+   opacity: 1
+}
+
+@keyframes photosDescription {
+   0%{
+      margin-top: 0;
+      grid-gap: 0;
+      opacity: 0;
+   }
+}
 
 .photosDescription img {
    width: 95vw;
+   margin-bottom:0;
 }
 
 /*PARTIE AGENCEMENT*/
@@ -154,8 +172,21 @@ video {
 .photos {
    margin-left: 3%;
 }
+
+.mosaic {
+   grid-gap: 17px;
+}
+
 .photos img {
    transition: top 0s;
+}
+
+.mosaic img:nth-child(8) {
+   height: 37vw;
+}
+
+.mosaic img:nth-child(6), .mosaic img:nth-child(10), .mosaic img:nth-child(11){
+   width: 49vw;
 }
 
 .mosaic img.open {
@@ -173,13 +204,6 @@ video {
    border-color: rgb(3, 7, 22);
 }
 
-.mosaic {
-   grid-gap: 1px;
-}
-
-.mosaic.animation {
-   animation-name:none;
-}
 
 .mosaic img:nth-child(8).open {
    width: 70vw;
@@ -200,6 +224,7 @@ video {
 }
 
 .bateau {
+   left:9.5vw;
    top: -27vw;
    width: 6vw;
 }
@@ -216,6 +241,12 @@ video {
       transform: rotate(30deg);
       left: 8.5vw;
    }
+
+   80%{
+      left:9.5vw;
+      top: -27vw;
+      transform: rotate(90deg);
+   }
 }
 
 /*PARTIE TARIF INFORMATION*/
@@ -230,10 +261,6 @@ video {
    opacity: 1;
 }
 
-.tarifsInformations.animation{
-   animation-name: none;
-   opacity: 1;
-}
 
 
 /*FOOTER*/

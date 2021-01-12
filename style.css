@@ -528,15 +528,12 @@ h1 {
    left: 8vw;
    width: 5vw;
    transform: rotate(90deg);
-   opacity: 0;
+   animation-name: bateau;
+   animation-duration: 8s;
+   animation-timing-function:ease-out;
+   animation-iteration-count: infinite;
 }
 
-.bateau.animation {
-   animation-name: bateau;
-   animation-duration: 7s;
-   animation-timing-function: ease-out;
-   opacity: 1;
-}
 
 @keyframes bateau {
    0% {
@@ -546,8 +543,14 @@ h1 {
    }
 
    70% {
-      top: -13vw;
       transform: rotate(30deg);
+      top: -13vw;
+      left: 8vw;
+   }
+
+   80%{
+      transform: rotate(90deg);
+      top: -17.5vw;
       left: 8vw;
    }
 }
