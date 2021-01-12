@@ -36,7 +36,7 @@ function parallaxDescription(a, b, c) {
 
 //parallaxDescription(conteneur, item, vitesseItem)
 if (smartphone() == false) {
-   parallaxDescription('.description', '.articleDescription', 203);
+   parallaxDescription('.description', '.articleDescription', 200);
 }
 
 //PARALLAX INVERSEE AGENCEMENT
@@ -135,10 +135,12 @@ function animation(element, hauteur) {
 
 if(smartphone()==true){
    animation('.photosDescription', 0.4);
+   animation('.articleDescription', 0.4);
 }
 else{
    animation('.mosaic', 1.2);
    animation('.tarifsInformations'  , 1.2);
+   animation('.photosDescription', 1.2);
 }
 
 //ANIMATION SMARTPHONE :

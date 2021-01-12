@@ -68,44 +68,56 @@ video {
    flex-direction: column;
    margin-top: 10%;
    margin-left: 6%;
-   margin-bottom: 5vw;
 }
 
 .articleDescription {
    border: solid 1px rgb(13, 22, 55);
    position: relative;
-   width: 95%;
    right: 0;
    left:0;
+   padding: 0px;
+   width: 90%;
+   opacity: 0;
 }
 
+.articleDescription.animation {
+   animation-name: articleDescription;
+   animation-duration: 3s;
+   animation-timing-function: ease-in-out;
+   opacity: 1;
+}
+
+@keyframes articleDescription {
+   from {
+      opacity: 0;
+   }
+   to {
+      opacity :1;
+   }
+}
 .photosDescription {
-   display: grid;
-   grid-template-columns: repeat(1, 5fr);
-   grid-gap: 3vw;
-   margin-top: 3vw;
    left:0;
-   opacity:0
+   margin-top:15vw;
+   grid-gap: 15vw;
 }
 
 .photosDescription.animation{
-   animation-name: photosDescription;
+   animation-name: photosDescriptionSmartphone;
    animation-duration: 3s;
    animation-timing-function: ease;
-   opacity: 1
+   grid-gap: 3vw;
+   margin-top: 3vw;
 }
 
-@keyframes photosDescription {
+@keyframes photosDescriptionSmartphone {
    0%{
-      margin-top: 0;
-      grid-gap: 0;
-      opacity: 0;
+      margin-top:20vw;
+      grid-gap: 20vw;
    }
 }
 
 .photosDescription img {
    width: 95vw;
-   margin-bottom:0;
 }
 
 /*PARTIE AGENCEMENT*/
@@ -139,7 +151,7 @@ video {
 
 .imagesAgencement img {
    top: 7vw;
-   transition: top 0s;
+   transition: top 0.7s;
 }
 
 .imagesAgencement img:hover {
@@ -147,10 +159,6 @@ video {
    top: 7vw;
 }
 
-
-.imagesAgencement img {
-   transition: top 0s;
-}
 
 .imagesAgencement img.open {
    top: 35%;
@@ -174,11 +182,11 @@ video {
 }
 
 .mosaic {
-   grid-gap: 17px;
+   grid-gap: 19px;
 }
 
 .photos img {
-   transition: top 0s;
+   transition: width 0.7s;
 }
 
 .mosaic img:nth-child(8) {
@@ -225,7 +233,7 @@ video {
 
 .bateau {
    left:9.5vw;
-   top: -27vw;
+   top: -30vw;
    width: 6vw;
 }
 
@@ -236,15 +244,15 @@ video {
       transform: rotate(0deg);
    }
 
-   70% {
-      top: -20vw;
+   65% {
+      top: -23vw;
       transform: rotate(30deg);
       left: 8.5vw;
    }
 
-   80%{
+   90%{
       left:9.5vw;
-      top: -27vw;
+      top: -30vw;
       transform: rotate(90deg);
    }
 }
