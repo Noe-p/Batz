@@ -97,24 +97,16 @@ video {
 }
 .photosDescription {
    left:0;
-   margin-top:15vw;
-   grid-gap: 15vw;
+   margin-top:20vw;
 }
 
 .photosDescription.animation{
-   animation-name: photosDescriptionSmartphone;
+   animation-name: photosDescription;
    animation-duration: 3s;
    animation-timing-function: ease;
-   grid-gap: 3vw;
    margin-top: 3vw;
 }
 
-@keyframes photosDescriptionSmartphone {
-   0%{
-      margin-top:20vw;
-      grid-gap: 20vw;
-   }
-}
 
 .photosDescription img {
    width: 95vw;
@@ -182,7 +174,7 @@ video {
 }
 
 .mosaic {
-   grid-gap: 19px;
+   grid-gap: 18px;
 }
 
 .photos img {
