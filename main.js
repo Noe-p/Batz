@@ -5,39 +5,39 @@ let agencement = document.querySelector('.agencement');
 let carte = document.querySelector('.carte');
 let photosDescription = document.querySelector('.photosDescription');
 
+//ANIMATION NAVIGATION
 window.addEventListener('scroll', () => {
    if (window.scrollY > description.offsetTop) {
       nav.classList.add('position');
    } else {
       nav.classList.remove('position');
    }
+});
 
-   if (((window.scrollY > agencement.offsetTop - nav.offsetHeight) && (window.scrollY < agencement.offsetTop + agencement.offsetHeight - nav.offsetHeight - 40)) ||
-      (window.scrollY > carte.offsetTop - nav.offsetHeight)) {
-      nav.classList.add('couleur');
+nav.onmouseout = function(){
+   nav.classList.remove('open');
+};
+nav.onmouseover = function(){
+   nav.classList.add('open');
+};
+
+//POSITION FIXED articleDescription
+let articleDescription = document.querySelector('.articleDescription');
+
+window.addEventListener('scroll', () => {
+   if(window.scrollY > description.offsetTop) {
+      articleDescription.classList.add('position');
    } else {
-      nav.classList.remove('couleur');
+      articleDescription.classList.remove('position');
+   }
+
+   if(window.scrollY >= description.offsetTop + description.offsetHeight - articleDescription.offsetHeight - 60 ){
+      articleDescription.classList.add('positionFin');
+   } else {
+      articleDescription.classList.remove('positionFin');
    }
 });
 
-//PARALLAX DESCRIPTION
-function parallaxDescription(a, b, c) {
-   window.addEventListener('scroll', () => {
-      let conteneur = document.querySelector(a);
-      let item = document.querySelector(b);
-      if ((window.scrollY >= conteneur.offsetTop) && (window.scrollY < conteneur.offsetTop + conteneur.offsetHeight - 20)) {
-         let j = window.scrollY - conteneur.offsetTop;
-         item.style.marginTop = (j / (conteneur.offsetHeight / c)) + '%';
-      } else {
-         item.style.marginTop = "0%";
-      }
-   });
-}
-
-//parallaxDescription(conteneur, item, vitesseItem)
-if (smartphone() == false) {
-   parallaxDescription('.description', '.articleDescription', 200);
-}
 
 //PARALLAX INVERSEE AGENCEMENT
 function parallaxInversee(c, a, b, i, k) {
@@ -139,8 +139,6 @@ if(smartphone()==true){
 }
 else{
    animation('.mosaic', 1.2);
-   animation('.tarifsInformations'  , 1.2);
-   animation('.photosDescription', 1.2);
 }
 
 //ANIMATION SMARTPHONE :

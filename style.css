@@ -15,7 +15,7 @@
 
 html {
    scroll-behavior: smooth;
-   margin: 0;
+   margin: 0
 }
 
 body {
@@ -27,12 +27,12 @@ body {
 }
 
 h2 {
-   font-size: 2vw;
+   font-size: 2em;
    text-align: center;
 }
 
 h3, p {
-   font-size: 1vw;
+   font-size: 1em;
 }
 
 ul {
@@ -206,44 +206,60 @@ h1 {
 
 /*NAVIGATION*/
 .navigation {
+   padding: 10px 0 10px 0;
    text-align: center;
    border-radius: 10px;
    border: solid 1px rgb(3, 7, 22);
    background-color: rgba(246, 239, 221, 0.5);
    color: (246, 239, 221);
    position: absolute;
-   width: 7%;
+   width: 80px;
+   height: 50px;
    top: 108%;
-   left: 1.5%;
-   transition-property: color, border, background-color;
-   transition-duration: 0.5s;
-   transition-timing-function: ease-in-out;
+   left: 2.2%;
    z-index: 3;
+   display: flex;
+   flex-direction: column;
+   cursor: pointer;
+   overflow: hidden;
+   transition: height 1s;
 }
 
-.navigation.position {
+.navigation.open{
+   height: 540px;
+}
+@keyframes navBar {
+   0%{height: 50px;}
+   100%{height:540;}
+}
+
+.navigation.position{
    position: fixed;
-   top: 5%;
+   top:7%;
+}
+.navigation img{
+   width: 50px;
+   height: 50px;
 }
 
-.navigation.position.couleur {
-   border: solid 1px rgb(246, 239, 221);
-   color: rgb(246, 239, 221);
-   background-color: rgba(13, 22, 55, 0.3);
+.iconesNav{
+   display: flex;
+   flex-direction: column;
+   margin-top: 10px;
 }
 
-.navigation.position.couleur a {
-   color: rgb(246, 239, 221);
+.iconesNav img{
+   margin-top: 20px;
+   width: 40px;
+   height: 40px;
+   transition: all 0.3s;
+
 }
 
-.navigation h3 {
-   font-size: 1.2vw;
-}
-
-.navigation p, .navigation a {
-   color: rgb(3, 7, 22);
-   font-size: 0.9vw;
-   transition: all 0.5s ease-in-out;
+.iconesNav img:hover{
+   width: 50px;
+   height: 50px;
+   margin-top: 10px;;
 }
 
 /*PARTIE DESCRIPTION*/
@@ -251,52 +267,46 @@ h1 {
    color: rgb(3, 7, 22);
    display:flex;
    padding-top: 2%;
-   margin-bottom: 5vw;
 }
 
 .articleDescription {
    position:absolute;
-   margin-top: 0;
-   top: 106%;
-   right: 2%;
+   top: 108%;
+   right: 1.5%;
    text-align: center;
-   width: 25vw;
+   width: 25%;
    height:auto;
    border-radius: 7px;
    padding: 10px;
-   background-color: rgba(246, 239, 221, 0.5);
+   border: solid 1px rgb(3, 7, 22);
    z-index: 2;
+}
+
+.articleDescription.position{
+   position: fixed;
+   top : 7%;
+}
+
+.articleDescription.position.positionFin{
+   top:-50%;
+   opacity: 0;
+   transition: all 1s;
 }
 
 .photosDescription {
    position: relative;
-   margin-top: 0%;
    width: auto;
    left:10%;
-   display: grid;
-   grid-template-columns: repeat(1, 5fr);
-   grid-gap: 20vw;
+   display: flex;
+   flex-direction: column;
 }
 
-.photosDescription.animation{
-   animation-name: photosDescription;
-   animation-duration: 3s;
-   animation-timing-function: ease;
-   grid-gap: 3vw;
-   margin-top: 0;
-}
-
-@keyframes photosDescription {
-   0%{
-      margin-top:20vw;
-      grid-gap: 20vw;
-   }
-}
 
 .photosDescription img {
    border: solid 1px rgb(3, 7, 22);
    width: 60vw;
    border-radius: 2px;
+   margin-top: 20px;
 }
 
 /*PARTIE AGENCEMENT*/
@@ -308,6 +318,7 @@ h1 {
    flex-direction: column;
    align-items: center;
    padding-bottom: 8vw;
+   margin-top: 60px;
 }
 
 .articleAgencement {
@@ -350,16 +361,24 @@ h1 {
    top: 50%;
    left: 50%;
    transform: translate(-50%, -50%);
-   padding: 200%;
+   background-color: rgba(0, 0, 0, 0.8);
+   padding: 100%;
    border: none;
    border-radius: 0;
    width: 40%;
-   background-color: rgba(3, 7, 22, 0.6);
    z-index: 4;
    cursor: auto;
-
+   transition: none;
+   animation-name: caroussel;
+   animation-duration: 1s;
 }
 
+@keyframes caroussel {
+   from{
+      opacity: 0;
+   }
+
+}
 .next, .prev {
    display: none;
 }
@@ -505,9 +524,12 @@ h1 {
    border: none;
    border-radius: 0;
    width: 60vw;
-   background-color: rgba(3, 7, 22, 0.6);
+   background-color: rgba(0, 0, 0, 0.8);
    z-index: 4;
    cursor: auto;
+   transition: none;
+   animation-name: caroussel;
+   animation-duration: 1s;
 }
 
 .mosaic img:nth-child(8).open {
@@ -585,20 +607,6 @@ h1 {
 	border-bottom: solid 3px rgb(13, 22, 55);
 }
 
-.tarifsInformations{
-   opacity: 0;
-}
-.tarifsInformations.animation{
-   animation-name: slideText;
-   animation-duration: 3s;
-   opacity: 1;
-}
-
-@keyframes slideText {
-   from {
-      transform: translateX(-200%);
-   }
-}
 
 /*FOOTER*/
 footer {
