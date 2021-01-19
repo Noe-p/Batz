@@ -11,8 +11,8 @@ ul {
 }
 /*EN-TETE*/
 h1 {
-   font-size: 14vw;
-   width: 100%;
+   font-size: 8em;
+   width: 90%;
 }
 
 #enTete{
@@ -26,92 +26,46 @@ video {
    width: 106%;
 }
 
-.menuGauche a, .menuDroit a {
-   font-size: 5vw;
-   padding-left: 130px;
-   padding-right: 130px;
-   padding-top: 20px;
-   padding-bottom: 20px;
-   border-radius: 20px;
-   margin: 40px;
-
+#flecheBas {
+   top: 90%;
+   width: 40px;
+   height: 40px;
 }
-
-.menuGauche a:hover, .menuDroit a:hover {
-   background-color: rgba(13, 22, 55, 0.4);
-   border: solid 1px rgb(3, 7, 22);
-   font-size: 5vw;
-   padding-left: 130px;
-   padding-right: 130px;
-   padding-top: 20px;
-   padding-bottom: 20px;
-   border-radius: 20px;
-   margin: 40px;
-}
-
 /*NAVIGATION*/
 .navigation {
    display: none;
 }
-.navigation h3 {
-   font-size: 3vw;
-}
-
-.navigation p, .navigation a {
-   font-size: 2.3vw;
-}
 
 /*PARTIE DESCRIPTION*/
 .description {
+   color: rgb(3, 7, 22);
+   padding-top: 2%;
    display: flex;
-   align-items: center;
    flex-direction: column;
-   margin-top: 10%;
-   margin-left: 6%;
+   height:auto;
 }
 
 .articleDescription {
-   border: solid 1px rgb(13, 22, 55);
-   position: relative;
-   right: 0;
-   left:0;
-   padding: 0px;
+   order:1;
    width: 90%;
-   opacity: 0;
+   margin-left: 4%;
+
 }
 
-.articleDescription.animation {
-   animation-name: articleDescription;
-   animation-duration: 3s;
-   animation-timing-function: ease-in-out;
-   opacity: 1;
-}
-
-@keyframes articleDescription {
-   from {
-      opacity: 0;
-   }
-   to {
-      opacity :1;
-   }
-}
 .photosDescription {
-   left:0;
-   margin-top:20vw;
+   margin-top: 40px;
+   width: 95%;
+   height: 700px;
+   order:2;
+   margin-left: 6%;
 }
-
-.photosDescription.animation{
-   animation-name: photosDescription;
-   animation-duration: 3s;
-   animation-timing-function: ease;
-   margin-top: 3vw;
-}
-
 
 .photosDescription img {
    width: 95vw;
+   border-radius: 2px;
+   margin-bottom: 20px;
+   transition: width 1s;
 }
-
 /*PARTIE AGENCEMENT*/
 #agencementID {
    width: 100%;

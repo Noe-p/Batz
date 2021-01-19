@@ -4,6 +4,8 @@ let nav = document.querySelector('.navigation');
 let agencement = document.querySelector('.agencement');
 let carte = document.querySelector('.carte');
 let photosDescription = document.querySelector('.photosDescription');
+let test = document.querySelector(".iconesNav");
+let test2 = document.querySelector(".test2");
 
 //ANIMATION NAVIGATION
 window.addEventListener('scroll', () => {
@@ -14,29 +16,14 @@ window.addEventListener('scroll', () => {
    }
 });
 
-nav.onmouseout = function(){
-   nav.classList.remove('open');
-};
-nav.onmouseover = function(){
-   nav.classList.add('open');
-};
-
-//POSITION FIXED articleDescription
-let articleDescription = document.querySelector('.articleDescription');
-
-window.addEventListener('scroll', () => {
-   if(window.scrollY > description.offsetTop) {
-      articleDescription.classList.add('position');
-   } else {
-      articleDescription.classList.remove('position');
-   }
-
-   if(window.scrollY >= description.offsetTop + description.offsetHeight - articleDescription.offsetHeight - 60 ){
-      articleDescription.classList.add('positionFin');
-   } else {
-      articleDescription.classList.remove('positionFin');
-   }
-});
+function onmouseover(element){
+   element.onmouseout = function(){
+      test2.style.opacity = "0";
+   };
+   element.onmouseover = function(){
+      test2.style.opacity = "1";
+   };
+}
 
 
 //PARALLAX INVERSEE AGENCEMENT
@@ -131,15 +118,7 @@ function animation(element, hauteur) {
    });
 }
 
-//animation(element a animer, hauteur de déclenchement)
 
-if(smartphone()==true){
-   animation('.photosDescription', 0.4);
-   animation('.articleDescription', 0.4);
-}
-else{
-   animation('.mosaic', 1.2);
-}
 
 //ANIMATION SMARTPHONE :
 function smartphone() {

@@ -15,20 +15,9 @@
       <section id="enTete">
          <h1 class="headline"> Une maison de caractère</h1>
 
-         <ul class="menuGauche">
-            <li><a href="#descriptionID">Description</a></li>
-            <li><a href="#agencementID">Agencement</a></li>
-            <li><a href="#equipementsID">Equipements</a></li>
-         </ul>
-         <ul class="menuDroit">
-            <li><a href="#tarifsID">Tarifs</a></li>
-            <li><a href="#informationsID">Informations</a></li>
-            <li><a href="#contactID">Contact</a></li>
-         </ul>
-
          <img id="flecheBas" src="assets/img/flecheBas.png" />
       </section>
-      <video autoplay muted playsinline loop poster="assets/img/vueDuCiel.png">
+      <video id="video" autoplay muted playsinline loop poster="assets/img/vueDuCiel.png">
          <source src="assets/img/intro.mp4" type="video/mp4">
          <source src="assets/img/intro.webm" type="video/webm">
       </video>
@@ -41,29 +30,44 @@
       <div class="iconesNav">
          <a href="#descriptionID">
             <img src="assets/img/description.png">
+            <p>Description</p>
          </a>
          <a href="#agencementID">
-            <img src="assets/img/agencement.png">
+            <img class="test" src="assets/img/agencement.png">
+            <p class="test2">Agencement</p>
          </a>
          <a href="#equipementsID">
             <img src="assets/img/equipements.png">
+            <p>Equipements</p>
          </a>
          <a href="#photosID">
             <img src="assets/img/image.png">
+            <p>Photos</p>
          </a>
          <a href="#carteID">
             <img src="assets/img/map.png">
+            <p>Carte</p>
          </a>
          <a href="#tarifsID">
             <img src="assets/img/tarifs.png">
+            <p>Tarifs</p>
          </a>
          <a href="#contactID">
             <img src="assets/img/call.png">
+            <p>Contact</p>
          </a>
       </div>
    </aside>
 
    <section class="description" id="descriptionID">
+
+      <div class="photosDescription">
+         <img src="assets/img/vueDuCiel.png" />
+         <img src="assets/img/maison.png" />
+         <img src="assets/img/vueCuisine.png" />
+         <img src="assets/img/vueJardin.png" />
+         <img src="assets/img/homard.png" />
+      </div>
 
       <article class="articleDescription">
          <h2>Description</h2>
@@ -77,15 +81,6 @@
             ballade sur la côte sauvage, nombreux jeux de société.
          </p>
       </article>
-
-      <div class="photosDescription">
-         <img src="assets/img/vueDuCiel.png" />
-         <img src="assets/img/maison.png" />
-         <img src="assets/img/vueCuisine.png" />
-         <img src="assets/img/vueJardin.png" />
-         <img src="assets/img/homard.png" />
-      </div>
-
    </section>
 
    <section class="agencement" id="agencementID">
