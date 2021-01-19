@@ -91,30 +91,14 @@ video {
 }
 
 #agencementID{
-   padding-bottom: 10vw;
+   height: 600px;
+   width: 105%;
 }
 .articleAgencement {
-   width: 90%;
+   width: 80%;
    padding-left: 5%;
    padding-right: 5%;
 }
-
-.imagesAgencement img {
-   top: 7vw;
-   transition: top 0.7s;
-}
-
-.imagesAgencement img:hover {
-   border-color: rgb(246, 239, 221);
-   top: 7vw;
-}
-
-
-.imagesAgencement img.open {
-   top: 35%;
-   width: 95%;
-}
-
 /*PARTIE EQUIPEMENT*/
 #listeEquipementsGauche, #listeEquipementsDroite {
    margin-right: 3vw;

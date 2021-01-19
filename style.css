@@ -162,7 +162,7 @@ h1 {
    background-color: rgba(246, 239, 221, 0.5);
    color: (246, 239, 221);
    position: absolute;
-   top: 108%;
+   top: 104%;
    left: 30px;
    width: 90px;
    height: 50px;
@@ -171,8 +171,12 @@ h1 {
    flex-direction: column;
    cursor: pointer;
    overflow: hidden;
-   transition: height 1s;
+   transition: height 1.5s;
    font-size: 0.8em;
+}
+
+.navigation:hover{
+   height: 620px;
 }
 
 .navigation img{
@@ -185,13 +189,10 @@ h1 {
 .navigation:hover img{
    transform: rotate(0deg);
 }
-.navigation:hover{
-   height: 540px;
-}
 
 .navigation.position{
    position: fixed;
-   top:7%;
+   top:5%;
 }
 
 .iconesNav{
@@ -225,7 +226,6 @@ h1 {
 
 /*PARTIE DESCRIPTION*/
 .description {
-   color: rgb(3, 7, 22);
    padding-top: 2%;
    display: flex;
    justify-content:space-around;
@@ -248,18 +248,16 @@ h1 {
    display: flex;
    flex-direction: column;
    height: 34vw;
-   border: solid 1px rgb(3, 7, 22);
    border-radius: 7px;
    overflow:hidden;
-   padding: 10px;
    margin-left: 8%;
    transition: all 0.5s;
+   overflow-y:auto;
+
 }
 
 .photosDescription:hover{
-   overflow-y:auto;
-   height: 36vw;
-   padding:0px
+   height:650px;
 }
 
 .photosDescription img {
@@ -269,30 +267,25 @@ h1 {
    transition: width 0.5s;
 }
 
-.photosDescription:hover img{
-   width: 53vw;
-}
 /*PARTIE AGENCEMENT*/
 #agencementID {
    background-color: rgb(13, 22, 55);
    color: rgb(246, 239, 221);
-   padding: 3vw;
+   padding: 10px;
    display: flex;
    align-items: center;
    justify-content: center;
+   height: 500px;
    margin-top: 40px;
-   height: 280px;
 }
 
 .articleAgencement {
    background-color: rgb(13, 22, 55);
-   position: relative;
    width: 50%;
    padding-left: 15%;
    padding-right: 15%;
    border: solid 1px rgb(246, 239, 221);
    border-radius: 7px;
-   z-index: 2;
 }
 
 .next, .prev {
@@ -393,12 +386,6 @@ h1 {
    width: 47.7vw;
    grid-column: 3/5;
    grid-row: 4 / 5;
-}
-
-.mosaic img:nth-child(12) {
-   width:30vw;
-   grid-row: 5/ 5;
-   grid-column: 1/3;
 }
 
 

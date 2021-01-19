@@ -26,26 +26,6 @@ function onmouseover(element){
 }
 
 
-//PARALLAX INVERSEE AGENCEMENT
-function parallaxInversee(c, a, b, i, k) {
-   let conteneur = document.querySelector(c);
-   let item1 = document.querySelector(a)
-   let item2 = document.querySelector(b);
-   window.addEventListener('scroll', () => {
-      if ((window.scrollY >= conteneur.offsetTop - screen.availHeight) && (window.scrollY < conteneur.offsetTop + conteneur.offsetHeight)) {
-         let j = window.scrollY - conteneur.offsetTop;
-         item1.style.marginTop = 1 - (j / i) + "%";
-         item2.style.marginTop = 1 - (j / k) + "%";
-      } else if (window.scrollY < conteneur.offsetTop) {
-         item1.style.marginTop = "9%";
-         item2.style.marginTop = "10%";
-      }
-   });
-}
-
-//parallaxInversee(conteneur, item1, item2, vitesseItem1, vitesseItem2)
-parallaxInversee('.agencement', '.articleAgencement', '.imagesAgencement', 70, 80);
-
 //OUVERTURE PHOTOS
 function ouvrirImage(conteneur) {
    let image = document.querySelector(conteneur).children;
