@@ -44,7 +44,7 @@ function parallaxInversee(c, a, b, i, k) {
 }
 
 //parallaxInversee(conteneur, item1, item2, vitesseItem1, vitesseItem2)
-parallaxInversee('.agencement', '.articleAgencement', '.imagesAgencement', 90, 80);
+parallaxInversee('.agencement', '.articleAgencement', '.imagesAgencement', 70, 80);
 
 //OUVERTURE PHOTOS
 function ouvrirImage(conteneur) {
@@ -103,7 +103,6 @@ function ouvrirImage(conteneur) {
 }
 
 //ouvrirImage(conteneur)
-ouvrirImage('.imagesAgencement');
 ouvrirImage('.mosaic');
 
 //ANIMATION

@@ -11,8 +11,11 @@ ul {
 }
 /*EN-TETE*/
 h1 {
+   top:35%;
    font-size: 8em;
    width: 90%;
+   border:solid 7px rgb(246, 239, 221);
+
 }
 
 #enTete{
@@ -55,9 +58,10 @@ video {
 .photosDescription {
    margin-top: 40px;
    width: 95%;
-   height: 700px;
+   height: auto;
    order:2;
    margin-left: 6%;
+   border:none;
 }
 
 .photosDescription img {
