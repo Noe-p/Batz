@@ -27,11 +27,13 @@ body {
    margin: 0;
    font-family: "Sanchez";
    background-color: rgb(246, 239, 221);
-   color: rgb(3, 7, 22);
+   color: rgb(13, 22, 55);
    overflow-x: hidden;
 }
 
 h2 {
+   color: rgb(13, 22, 55);
+
    font-size: 2em;
    text-align: center;
 }
@@ -294,7 +296,9 @@ h1 {
    height: 500px;
    margin-top: 40px;
 }
-
+#agencementID h2{
+   color: rgb(246, 239, 221);
+}
 .articleAgencement {
    background-color: rgb(13, 22, 55);
    width: 50%;
@@ -355,6 +359,7 @@ button {
    border-radius: 25px;
    border: solid 2px rgb(246, 239, 221);
    transition: all 0.7s;
+   font-size: 1em;
 }
 button:hover{
    border: solid 2px rgb(13, 22, 55);
@@ -377,17 +382,17 @@ button:active{
 
 .jardin.open, .etage0.open, .etage1.open, .etage2.open {
    display: grid;
-   grid-template-columns: repeat(2, 1fr);
-   height: 700px;
+   grid-template-columns: repeat(2, 2fr);
+   height: 45vw;
    grid-gap: 10px;
 }
 
 .jardin.open img, .etage0.open img, .etage1.open img, .etage2.open img {
    width: 30vw;
    display: block;
-   position: relative;
    animation-name: galerie;
    animation-duration: 1.5s;
+   background-color: teal;
 }
 
 @keyframes galerie {
@@ -422,6 +427,8 @@ button:active{
 .articleCarte h2 {
    font-family: 'GreatVibes-Regular';
    font-size: 2.5vw;
+   color: rgb(246, 239, 221);
+
 }
 
 .articleCarte img {
@@ -488,6 +495,10 @@ footer {
 
 #piedPage {
    position: absolute;
+}
+
+#piedPage h2{
+   color: rgb(246, 239, 221);
 }
 
 .bouton:hover {
