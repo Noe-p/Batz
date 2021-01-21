@@ -1,13 +1,13 @@
-h2 {
-   font-size: 5vw;
+h2{
+   font-size: 3em;
 }
 
 h3, p {
-   font-size: 3vw;
+   font-size: 1.5em;
 }
 
 ul {
-   font-size: 1.6em;
+   font-size: 1.5em;
 }
 /*EN-TETE*/
 h1 {
@@ -92,7 +92,7 @@ video {
 
 #agencementID{
    height: 600px;
-   width: 105%;
+   width: 104%;
 }
 .articleAgencement {
    width: 80%;
@@ -111,47 +111,31 @@ video {
 }
 
 /*PHOTOS*/
-.photos {
-   margin-left: 3%;
+.photos{
+   margin-left: 3.5%;
+}
+button{
+   font-size: 2em;
+   padding: 25px;
+   border-radius: 50px;
+   border: solid 2px rgb(13, 22, 55);
 }
 
-.mosaic {
-   grid-gap: 18px;
+.buttonJardin.open, .buttonEtage0.open, .buttonEtage1.open, .buttonEtage2.open {
+   border-radius: 50px;
 }
 
-.photos img {
-   transition: width 0.7s;
+.jardin.open, .etage0.open, .etage1.open, .etage2.open {
+   height: 700px;
 }
 
-.mosaic img:nth-child(8) {
-   height: 37vw;
+.jardin.open img, .etage0.open img, .etage1.open img, .etage2.open img {
+   width: 47vw;
 }
-
-.mosaic img:nth-child(6), .mosaic img:nth-child(10), .mosaic img:nth-child(11){
-   width: 49vw;
+.photos img:active {
+   width: 90%;
+   top:35%;
 }
-
-.mosaic img.open {
-   top: 35%;
-   width: 95%;
-}
-
-.mosaic img.open:hover {
-   top: 35%;
-   width: 95%;
-}
-
-.photos img:hover {
-   top: 0px;
-   border-color: rgb(3, 7, 22);
-}
-
-
-.mosaic img:nth-child(8).open {
-   width: 70vw;
-   height: 120vw;
-}
-
 /*CARTE*/
 
 .carte {

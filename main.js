@@ -4,8 +4,6 @@ let nav = document.querySelector('.navigation');
 let agencement = document.querySelector('.agencement');
 let carte = document.querySelector('.carte');
 let photosDescription = document.querySelector('.photosDescription');
-let test = document.querySelector(".iconesNav");
-let test2 = document.querySelector(".test2");
 
 //ANIMATION NAVIGATION
 window.addEventListener('scroll', () => {
@@ -16,74 +14,57 @@ window.addEventListener('scroll', () => {
    }
 });
 
-function onmouseover(element){
-   element.onmouseout = function(){
-      test2.style.opacity = "0";
-   };
-   element.onmouseover = function(){
-      test2.style.opacity = "1";
-   };
+//GALERIE PHOTOS
+let jardin = document.querySelector('.jardin');
+let etage0 = document.querySelector('.etage0');
+let etage1 = document.querySelector('.etage1');
+let etage2 = document.querySelector('.etage2');
+
+let buttonJardin = document.querySelector('.buttonJardin');
+let buttonEtage0 = document.querySelector('.buttonEtage0');
+let buttonEtage1 = document.querySelector('.buttonEtage1');
+let buttonEtage2 = document.querySelector('.buttonEtage2');
+
+buttonJardin.onclick = function(){
+   jardin.classList.add('open');
+   etage0.classList.remove('open');
+   etage1.classList.remove('open');
+   etage2.classList.remove('open');
+   buttonJardin.classList.add('open');
+   buttonEtage0.classList.remove('open');
+   buttonEtage1.classList.remove('open');
+   buttonEtage2.classList.remove('open');
 }
-
-
-//OUVERTURE PHOTOS
-function ouvrirImage(conteneur) {
-   let image = document.querySelector(conteneur).children;
-   let conteneurImg = document.querySelector(conteneur);
-   let firstDiv = document.createElement("div");
-   let lastDiv = document.createElement("div");
-
-   conteneurImg.insertAdjacentElement('afterbegin', firstDiv);
-   conteneurImg.firstChild.classList.add('prev');
-   let prev = document.querySelector('.prev');
-   conteneurImg.insertAdjacentElement('beforeend', lastDiv);
-   conteneurImg.lastChild.classList.add('next');
-   let next = document.querySelector('.next');
-
-
-   //Creer/supprime une nouvelle classe lors du clic
-   //Caroussel permettant de switcher entre les images
-   function ouvrirImg(i) {
-
-      function nextImg() {
-         if (i == 1) { //si on est sur la premiere
-            i = image.length - 2; // on va sur la derniere
-            image[1].classList.toggle('open'); // on cache la nouvelle image
-         } else {
-            i--;
-            image[i + 1].classList.toggle('open');
-         }
-         image[i].classList.toggle('open'); // on affiche la nouvelle image
-      }
-
-      function prevImg() {
-         if (i == image.length - 2) { //si on est sur la derniere image
-            i = 1; //on retourne à la première
-            image[image.length - 2].classList.toggle('open'); //on cache la derniere image
-         } else {
-            i++;
-            image[i - 1].classList.toggle('open');
-         }
-         image[i].classList.toggle('open'); //on affiche la nouvelle image
-      }
-
-      image[i].onclick = function() {
-         image[i].classList.toggle('open');
-         prev.classList.toggle('open');
-         next.classList.toggle('open');
-         next.onclick = nextImg;
-         prev.onclick = prevImg;
-      };
-   };
-
-   //appel la fonction pour chaque image et les boutons
-   for (var i = 0; i < image.length; i++) {
-      ouvrirImg(i);
-   }
+buttonEtage0.onclick = function(){
+   jardin.classList.remove('open');
+   etage0.classList.add('open');
+   etage1.classList.remove('open');
+   etage2.classList.remove('open');
+   buttonJardin.classList.remove('open');
+   buttonEtage0.classList.add('open');
+   buttonEtage1.classList.remove('open');
+   buttonEtage2.classList.remove('open');
 }
-
-//ouvrirImage(conteneur)
-ouvrirImage('.mosaic');
+buttonEtage1.onclick = function(){
+   jardin.classList.remove('open');
+   etage0.classList.remove('open');
+   etage1.classList.add('open');
+   etage2.classList.remove('open');
+   buttonJardin.classList.remove('open');
+   buttonEtage0.classList.remove('open');
+   buttonEtage1.classList.add('open');
+   buttonEtage2.classList.remove('open');
+}
+buttonEtage2.onclick = function(){
+   jardin.classList.remove('open');
+   etage0.classList.remove('open');
+   etage1.classList.remove('open');
+   etage2.classList.add('open');
+   buttonJardin.classList.remove('open');
+   buttonEtage0.classList.remove('open');
+   buttonEtage1.classList.remove('open');
+   buttonEtage2.classList.add('open');
+}
 
 //ANIMATION
 
