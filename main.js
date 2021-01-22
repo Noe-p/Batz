@@ -1,9 +1,6 @@
 //ANIMATION DE LA DIV NAVIGATION
 let description = document.querySelector('.description');
 let nav = document.querySelector('.navigation');
-let agencement = document.querySelector('.agencement');
-let carte = document.querySelector('.carte');
-let photosDescription = document.querySelector('.photosDescription');
 
 //ANIMATION NAVIGATION
 window.addEventListener('scroll', () => {
@@ -64,27 +61,4 @@ buttonEtage2.onclick = function(){
    buttonEtage0.classList.remove('open');
    buttonEtage1.classList.remove('open');
    buttonEtage2.classList.add('open');
-}
-
-//ANIMATION
-
-//creer une classe lors du scroll
-function animation(element, hauteur) {
-   let item = document.querySelector(element);
-   window.addEventListener('scroll', () => {
-      if (window.scrollY > item.offsetTop - (screen.height / hauteur)) {
-         item.classList.add('animation');
-      }
-   });
-}
-
-
-
-//ANIMATION SMARTPHONE :
-function smartphone() {
-   if (navigator.userAgent.search('Mobile') == -1) {
-      return false;
-   } else {
-      return true;
-   }
 }
