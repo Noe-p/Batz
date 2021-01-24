@@ -118,6 +118,9 @@ button{
 
 .jardin.open img, .etage0.open img, .etage1.open img, .etage2.open img {
    width: 47vw;
+   background-color: rgba(246, 239, 221, 0);
+   transition-property: background-color, width;
+   transition-duration: 0.5s;
 }
 
 .photos a:hover::before, .jardin.open .diffTaille:hover::before {
@@ -129,7 +132,7 @@ button{
 }
 .photos a.ouvrirImg img {
    width: 90%;
-   top : 30%;
+   top : 40%;
 }
 /*CARTE*/
 
@@ -187,6 +190,6 @@ button{
 /*FOOTER*/
 
 footer {
-   height: 500px;
+   height: 700px;
    width: 106%;
 }

@@ -52,7 +52,7 @@ li {
    margin-bottom: 20px;
 }
 
-a {
+.navigation a {
    text-decoration: none;
    color: rgb(3, 7, 22);
 }
@@ -61,11 +61,11 @@ a {
    font-weight: bold;
 }
 
-a:visited {
+.navigation a:visited {
    color: rgb(3, 7, 22);
 }
 
-p .lienLeboncoin:hover, footer li a:hover {
+p .lienLeboncoin:hover, footer a:hover {
    color: rgb(235, 165, 0);
 }
 
@@ -179,6 +179,9 @@ h1 {
    height: 620px;
 }
 
+.navigation a:visited{
+   color: rgb(3, 7, 22);
+}
 .navigation img {
    width: 50px;
    height: 50px;
@@ -571,6 +574,7 @@ footer {
    align-items: center;
    justify-content: space-around;
    height: 500px;
+   margin: 0;
 }
 
 #piedPage {
@@ -610,6 +614,20 @@ footer {
 
 footer a {
    color: rgb(246, 239, 221);
+   text-decoration: none;
+
+}
+
+.noe {
+   color: rgb(246, 239, 221);
+   background-color: rgb(13, 22, 55);
+   padding-top: 100px;
+
+
+}
+
+.noe a:hover{
+   color: rgb(235, 165, 0);
 }
 
 /*RESPONSIVE DESIGN*/
