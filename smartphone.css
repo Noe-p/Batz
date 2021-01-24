@@ -74,21 +74,8 @@ video {
 #agencementID {
    width: 100%;
 }
-.next.open, .prev.open {
-   top: 80%;
-   width: 15vw;
-   height: 15vw;
-}
 
-.next.open {
-   right: 20%;
-   background-image: url(assets/img/next.png);
-}
 
-.prev.open {
-   left: 20%;
-   background-image: url(assets/img/prev.png);
-}
 
 #agencementID{
    height: 600px;
@@ -132,9 +119,17 @@ button{
 .jardin.open img, .etage0.open img, .etage1.open img, .etage2.open img {
    width: 47vw;
 }
-.photos img:active {
+
+.photos a:hover::before, .jardin.open .diffTaille:hover::before {
+   opacity: 0;
+}
+
+.photos a:hover::after {
+   background-color: rgba(0, 0, 0, 0.0);
+}
+.photos a.ouvrirImg img {
    width: 90%;
-   top:35%;
+   top : 30%;
 }
 /*CARTE*/
 

@@ -21,7 +21,7 @@ $ cd Batz/
 $ firefox index.html
 ```
 
-**En ligne :** http://location-maison-iledebatz.fr/
+**En ligne :** https://location-maison-iledebatz.fr/
 
 ## Contenu
 

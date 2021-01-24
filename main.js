@@ -62,3 +62,24 @@ buttonEtage2.onclick = function(){
    buttonEtage1.classList.remove('open');
    buttonEtage2.classList.add('open');
 }
+
+//OUVERTURE PHOTOS
+function ouvrirImage(conteneur) {
+   let image = document.querySelector(conteneur).children;
+
+   function ouvrirImg(i) {
+
+      image[i].onclick = function() {
+         image[i].classList.toggle('ouvrirImg');
+      };
+   };
+   //appel la fonction pour chaque image et les boutons
+   for (var i = 0; i < image.length; i++) {
+      ouvrirImg(i);
+   }
+}
+//ouvrirImage(conteneur)
+ouvrirImage('.etage1');
+ouvrirImage('.etage0');
+ouvrirImage('.etage2');
+ouvrirImage('.jardin');
