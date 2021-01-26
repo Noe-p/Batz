@@ -3,11 +3,11 @@ h2{
 }
 
 h3, p {
-   font-size: 1.5em;
+   font-size: 2em;
 }
 
 ul {
-   font-size: 1.5em;
+   font-size: 2em;
 }
 /*EN-TETE*/
 h1 {
@@ -42,7 +42,7 @@ video {
 /*PARTIE DESCRIPTION*/
 .description {
    color: rgb(3, 7, 22);
-   padding-top: 2%;
+   margin-top : 60px;
    display: flex;
    flex-direction: column;
    height:auto;
@@ -78,8 +78,9 @@ video {
 
 
 #agencementID{
-   height: 600px;
+   height: 800px;
    width: 104%;
+   margin-bottom:100px;
 }
 .articleAgencement {
    width: 80%;
@@ -100,6 +101,8 @@ video {
 /*PHOTOS*/
 .photos{
    margin-left: 3.5%;
+   margin-top: 100px;
+   margin-bottom: 100px;
 }
 button{
    font-size: 2em;
@@ -138,6 +141,7 @@ button{
 
 .carte {
    width: 106%;
+   margin-top:150px;
 }
 .articleCarte h2 {
    font-size: 5vw;
@@ -177,7 +181,7 @@ button{
 
 .tarifs, .informations {
    width: 80vw;
-   height: 35vw;
+   height: 50vw;
 }
 
 .tarifsInformations {
@@ -192,4 +196,8 @@ button{
 footer {
    height: 700px;
    width: 106%;
+}
+
+.bouton {
+   margin-left: 70%;
 }

@@ -622,8 +622,7 @@ footer a {
    color: rgb(246, 239, 221);
    background-color: rgb(13, 22, 55);
    padding-top: 100px;
-
-
+   font-size: 0.7em;
 }
 
 .noe a:hover{
