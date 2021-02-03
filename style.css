@@ -237,7 +237,7 @@ h1 {
    display: flex;
    justify-content: space-around;
    align-items: center;
-   height: 600px;
+   height: auto;
 }
 
 .articleDescription {
@@ -502,9 +502,7 @@ button:active {
    text-align: center;
    display: flex;
    align-items: center;
-   flex-direction: column;
-   margin-bottom: 30px;
-   font-family: 'Lobster';
+   flex-direction: column;   font-family: 'Lobster';
    font-size: 1.2em;
 }
 
@@ -554,13 +552,12 @@ button:active {
 #tarifsInformations {
    display: flex;
    justify-content: center;
-   margin-bottom: 30px;
    flex-wrap: wrap;
 }
 
 .tarifs, .informations {
-   width: 42vw;
-   height: 14vw;
+   display: block;
+   width: 500px;
    margin: 20px;
 }
 

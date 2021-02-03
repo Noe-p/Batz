@@ -181,12 +181,11 @@ button{
 /*PARTIE TARIF INFORMATION*/
 
 .tarifs, .informations {
-   width: 80vw;
-   height: 50vw;
+   width: auto;
+   font-size: 0.4em;
 }
 
 .tarifsInformations {
-   margin-left: 4%;
    opacity: 1;
 }
 
