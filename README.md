@@ -8,7 +8,7 @@ Il n'y a pas de deadline, le site sera mis à jour en fonction de mes temps libr
 
 **date de début :** 01/12/2020
 
-## Auteurs
+## Développeur
 
 Noé PHILIPPE
 
